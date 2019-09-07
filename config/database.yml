@@ -80,6 +80,11 @@ test:
 #
 production:
   <<: *default
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
   database: PhotoApp_production
+  pool: 5
   username: PhotoApp
-  password: <%= ENV['PHOTOAPP_DATABASE_PASSWORD'] %>
+  password: 12345678
+ 
