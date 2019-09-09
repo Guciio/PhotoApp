@@ -2834,3 +2834,313 @@ Processing by IndicesController#index as HTML
 Completed 200 OK in 2103ms (Views: 2098.9ms | ActiveRecord: 0.0ms | Allocations: 7859)
 
 
+[24433] - Gracefully shutting down workers...
+[24433] === puma shutdown: 2019-09-09 19:14:21 +0200 ===
+[24433] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 19:37:23 +0200 ===
+[26614] * Starting control server on unix:///tmp/puma-status-1568050643564-26614
+[26614] - Worker 0 (pid: 26624) booted, phase: 0
+Started GET "/indices" for ::1 at 2019-09-09 19:37:26 +0200
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2134.3ms | Allocations: 11464)
+Completed 200 OK in 5538ms (Views: 5048.3ms | ActiveRecord: 0.0ms | Allocations: 1291947)
+
+
+[26614] - Gracefully shutting down workers...
+[26614] === puma shutdown: 2019-09-09 19:37:36 +0200 ===
+[26614] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 20:07:27 +0200 ===
+[27104] * Starting control server on unix:///tmp/puma-status-1568052447667-27104
+[27104] - Worker 0 (pid: 27113) booted, phase: 0
+Started GET "/indices" for ::1 at 2019-09-09 20:07:31 +0200
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1759.9ms | Allocations: 11251)
+Completed 200 OK in 5150ms (Views: 4706.1ms | ActiveRecord: 0.0ms | Allocations: 1291735)
+
+
+Started GET "/sendphoto?photo=test.png" for ::1 at 2019-09-09 20:07:52 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"test.png"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2811)
+
+
+  
+NoMethodError (undefined method `value' for "test.png":String):
+  
+app/controllers/indices_controller.rb:74:in `send_photo'
+Started GET "/sendphoto?photo=test.png" for ::1 at 2019-09-09 20:12:24 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"test.png"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2033)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /test.png):
+  
+app/controllers/indices_controller.rb:74:in `send_photo'
+Started GET "/sendphoto?photo=test.png" for ::1 at 2019-09-09 20:17:53 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"test.png"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2535)
+
+
+  
+Errno::EISDIR (Is a directory @ io_fread - .):
+  
+app/controllers/indices_controller.rb:75:in `send_photo'
+Started GET "/sendphoto?photo=test.png" for ::1 at 2019-09-09 20:18:23 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"test.png"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1970)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - ./test.png):
+  
+app/controllers/indices_controller.rb:75:in `send_photo'
+Started GET "/sendphoto?photo=test.png" for ::1 at 2019-09-09 20:20:46 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"test.png"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1931)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/binarsummer/PhotoApp/test.png/test.png):
+  
+app/controllers/indices_controller.rb:75:in `send_photo'
+Started GET "/sendphoto?photo=test.png" for ::1 at 2019-09-09 20:20:56 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"test.png"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1966)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/binarsummer/PhotoApp/test.png):
+  
+app/controllers/indices_controller.rb:75:in `send_photo'
+Started GET "/indices" for ::1 at 2019-09-09 20:21:14 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1803.3ms | Allocations: 2676)
+Completed 200 OK in 1825ms (Views: 1812.9ms | ActiveRecord: 0.0ms | Allocations: 8270)
+
+
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 20:21:21 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1941)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/binarsummer/PhotoApp/download.png):
+  
+app/controllers/indices_controller.rb:75:in `send_photo'
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 20:24:26 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2534)
+
+
+  
+Errno::EISDIR (Is a directory @ io_fread - /home/binarsummer/PhotoApp):
+  
+app/controllers/indices_controller.rb:75:in `send_photo'
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 20:36:37 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1927)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/binarsummer/PhotoApp/download.png):
+  
+app/controllers/indices_controller.rb:75:in `send_photo'
+Started GET "/indices" for ::1 at 2019-09-09 20:36:46 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (7.2ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.0ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.0ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.0ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.0ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.0ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered indices/index.html.erb within layouts/application (Duration: 1083.7ms | Allocations: 156738)
+Completed 500 Internal Server Error in 1106ms (ActiveRecord: 30.7ms | Allocations: 159588)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007f6b726044f8>:0x00007f6b72616270>):
+    13:       <tr>
+    14:         <form action="/sendphoto">
+    15:           Select photo to send to S3:<br>
+    16:           <%= f.input :image, :as => :file %>
+    17: <!--          <input type="file" name="photo" >-->
+    18:           <input type="submit" value="Send">
+    19:         </form>
+  
+app/views/indices/index.html.erb:16
+Started GET "/indices" for ::1 at 2019-09-09 20:40:31 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1703.4ms | Allocations: 2827)
+Completed 200 OK in 1745ms (Views: 1733.4ms | ActiveRecord: 0.0ms | Allocations: 9133)
+
+
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 20:40:39 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 4390)
+
+
+  
+Sprockets::Rails::Helper::AssetNotFound (The asset "download.png" is not present in the asset pipeline.):
+  
+app/controllers/indices_controller.rb:74:in `send_photo'
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 20:42:56 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 4528)
+
+
+  
+Sprockets::Rails::Helper::AssetNotFound (The asset "download.png" is not present in the asset pipeline.):
+  
+app/controllers/indices_controller.rb:74:in `send_photo'
+Started GET "/indices" for ::1 at 2019-09-09 21:05:32 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1720.8ms | Allocations: 3685)
+Completed 200 OK in 1771ms (Views: 1732.4ms | ActiveRecord: 0.0ms | Allocations: 13110)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:05:34 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 241.7ms | Allocations: 2957)
+Completed 200 OK in 260ms (Views: 252.1ms | ActiveRecord: 0.0ms | Allocations: 9548)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:07:25 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2313)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 6377)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    21: <div class="margin-bottom-20">
+    22:   <form action="/sendtoworker" method="post" enctype="application/x-www-form-urlencoded">
+    23:     <select id="imageSelect" multiple="multiple" class="image-picker show-html" name="keys[]">
+    24:       <% @objects.each do |object| %>
+    25:         <option data-img-src='<%= @s3_direct_post.url + "/" + object.key %>' value="<%= object.key %>"></option>
+    26:       <% end %>
+    27:     </select>
+  
+app/views/indices/index.html.erb:24
+Started GET "/indices" for ::1 at 2019-09-09 21:07:39 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 967)
+Completed 200 OK in 26ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 8627)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:07:39 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 659)
+Completed 200 OK in 24ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 7407)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:08:50 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1707.8ms | Allocations: 3694)
+Completed 200 OK in 1728ms (Views: 1720.0ms | ActiveRecord: 0.0ms | Allocations: 11190)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:08:52 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 259.9ms | Allocations: 2951)
+Completed 200 OK in 280ms (Views: 272.9ms | ActiveRecord: 0.0ms | Allocations: 9542)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:14:47 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1879.3ms | Allocations: 3684)
+Completed 200 OK in 1899ms (Views: 1890.7ms | ActiveRecord: 0.0ms | Allocations: 11193)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:14:49 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 240.8ms | Allocations: 2956)
+Completed 200 OK in 258ms (Views: 250.3ms | ActiveRecord: 0.0ms | Allocations: 9547)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:18:58 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1681.1ms | Allocations: 2888)
+Completed 200 OK in 1706ms (Views: 1693.3ms | ActiveRecord: 0.0ms | Allocations: 10384)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:23:59 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 920.8ms | Allocations: 2824)
+Completed 200 OK in 938ms (Views: 931.9ms | ActiveRecord: 0.0ms | Allocations: 9124)
+
+
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 21:24:05 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1941)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/binarsummer/PhotoApp/download.png):
+  
+app/controllers/indices_controller.rb:75:in `send_photo'
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 21:24:39 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1982ms (ActiveRecord: 0.0ms | Allocations: 4250)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:24:41 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 306.4ms | Allocations: 2520)
+Completed 200 OK in 325ms (Views: 320.7ms | ActiveRecord: 0.0ms | Allocations: 7544)
+
+
+Started GET "/deletephoto?choosen_photo=download.png&deleteButton=Delete" for ::1 at 2019-09-09 21:24:46 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png", "deleteButton"=>"Delete"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1186ms (ActiveRecord: 0.0ms | Allocations: 6126)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 21:24:47 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 860.9ms | Allocations: 2618)
+Completed 200 OK in 877ms (Views: 871.8ms | ActiveRecord: 0.0ms | Allocations: 7650)
+
+
+[27104] - Gracefully shutting down workers...
+[27104] === puma shutdown: 2019-09-09 21:24:55 +0200 ===
+[27104] - Goodbye!
+Exiting

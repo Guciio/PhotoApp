@@ -71,7 +71,8 @@ class IndicesController < ApplicationController
                                access_key_id: Rails.application.credentials.aws[:access_key_id],
                                secret_access_key: Rails.application.credentials.aws[:secret_access_key])
     obj = s3.bucket('awsprojectbuckett').object(params[:photo])
-    obj.upload_file('/home/binarsummer/Desktop/'+ params[:photo])
+    pathToFile = File.expand_path(params[:photo])
+    obj.upload_file(pathToFile )
     redirect_to action: "index"
   end
 
