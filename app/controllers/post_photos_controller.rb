@@ -1,10 +1,22 @@
 class PostPhotosController < ApplicationController
   before_action :set_post_photo, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /post_photos
   # GET /post_photos.json
   def index
     @post_photos = PostPhoto.all
+  end
+
+  def rotate_photo
+    sqs = Aws::SQS::Client.new(
+        region: Rails.application.credentials.aws[:aws_region],
+        access_key_id: Rails.application.credentials.aws[:access_key_id],
+        secret_access_key: Rails.application.credentials.aws[:secret_access_key])
+    sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
+                     message_body: "rotate: ",
+                     message_group_id: rand(1..100).to_s)
+    redirect_to action: "index"
   end
 
   # GET /post_photos/1
@@ -25,7 +37,6 @@ class PostPhotosController < ApplicationController
   # POST /post_photos.json
   def create
     @post_photo = PostPhoto.new(post_photo_params)
-    #@post_photo.image.attach(params[:image])
 
     respond_to do |format|
       if @post_photo.save
@@ -68,6 +79,6 @@ class PostPhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_photo_params
-      params.require(:post_photo).permit(:title, :content)
+      params.require(:post_photo).permit(:title, :content, :image)
     end
 end

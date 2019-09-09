@@ -1,6 +1,9 @@
-<h1>Editing Post Photo</h1>
+<h1>Editing Photo</h1>
 
-<%= render 'form', post_photo: @post_photo %>
+<form action="/rotatephoto">
+  <input type="submit" name="rotateButton" value="Rotate">
+  <input type="submit" formaction="/deletephoto" name="deleteButton" value="Delete">
+</form>
 
 <%= link_to 'Show', @post_photo %> |
 <%= link_to 'Back', post_photos_path %>

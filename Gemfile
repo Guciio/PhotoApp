@@ -25,7 +25,9 @@ gem 'jbuilder', '~> 2.7'
 
 #AWS Gems
 gem 'aws-sdk', '< 2'
-gem "aws-sdk-s3", require: false
+gem 'aws-sdk-core', '~> 3'
+gem 'aws-sdk-s3', require: false
+gem 'aws-sdk-resources', '~> 3'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Post Photos</h1>
+<h1>S3 Photos</h1>
 
 <table>
   <thead>
@@ -18,7 +18,6 @@
         <td><%= post_photo.content %></td>
         <td><%= link_to 'Show', post_photo %></td>
         <td><%= link_to 'Edit', edit_post_photo_path(post_photo) %></td>
-        <td><%= link_to 'Destroy', post_photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Post Photo', new_post_photo_path %>
+<%= link_to 'New Photo', new_post_photo_path %>
