@@ -5915,3 +5915,84 @@ ActionView::Template::Error (Can't resolve image into URL: to_model delegated to
     20:   </p>
   
 app/views/post_photos/show.html.erb:19
+[32671] - Gracefully shutting down workers...
+[32671] === puma shutdown: 2019-09-09 22:44:55 +0200 ===
+[32671] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 22:45:01 +0200 ===
+[551] * Starting control server on unix:///tmp/puma-status-1568061901238-551
+[551] - Worker 0 (pid: 567) booted, phase: 0
+Started GET "/post_photos" for ::1 at 2019-09-09 22:45:06 +0200
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (1.0ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 62.2ms | Allocations: 7371)
+Completed 200 OK in 2977ms (Views: 2944.2ms | ActiveRecord: 14.0ms | Allocations: 1166948)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-09 22:45:11 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 50.6ms | Allocations: 3180)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 53.4ms | Allocations: 3541)
+Completed 200 OK in 74ms (Views: 72.5ms | ActiveRecord: 0.0ms | Allocations: 8081)
+
+
+Started POST "/post_photos" for ::1 at 2019-09-09 22:45:19 +0200
+Processing by PostPhotosController#create as HTML
+  Parameters: {"authenticity_token"=>"VzxCcByDfLRkH0QmyX7DC3aXSvYiDtxs3LqkNAHPenRJoQD4UtU1FyyNS4zhaRc3YcIVeBr2D+xmHSa0EK46nw==", "post_photo"=>{"title"=>"1111111111", "content"=>"11111111", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f45b6b62dc8 @tempfile=#<Tempfile:/tmp/RackMultipart20190909-567-p5lznv.png>, @original_filename="download.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post_photo[image]\"; filename=\"download.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Post photo"}
+[31mUnpermitted parameter: :image[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/post_photos_controller.rb:31:in `block in create'
+  [1m[36mPostPhoto Create (3.4ms)[0m  [1m[32mINSERT INTO "post_photos" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "1111111111"], ["content", "11111111"], ["created_at", "2019-09-09 20:45:19.147527"], ["updated_at", "2019-09-09 20:45:19.147527"]]
+  ↳ app/controllers/post_photos_controller.rb:31:in `block in create'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/post_photos_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/post_photos/28
+Completed 302 Found in 27ms (ActiveRecord: 6.5ms | Allocations: 2999)
+
+
+Started GET "/post_photos/28" for ::1 at 2019-09-09 22:45:19 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mPostPhoto Load (0.5ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:66:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 28], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 59.3ms | Allocations: 4641)
+Completed 200 OK in 92ms (Views: 77.0ms | ActiveRecord: 4.9ms | Allocations: 10123)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-09 22:45:21 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (0.6ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 26.5ms | Allocations: 3588)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.6ms | Allocations: 7970)
+
+
+Started GET "/post_photos/28" for ::1 at 2019-09-09 22:45:23 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mPostPhoto Load (1.1ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:66:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 28], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1211)
+Completed 200 OK in 49ms (Views: 43.2ms | ActiveRecord: 1.8ms | Allocations: 6125)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-09 22:45:25 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (0.6ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 3584)
+Completed 200 OK in 127ms (Views: 125.8ms | ActiveRecord: 0.6ms | Allocations: 7969)
+
+
