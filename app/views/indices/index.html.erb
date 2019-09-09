@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Indices</h1>
+<h1>Aws Project</h1>
 
 <table>
   <thead>
@@ -10,16 +10,24 @@
   </thead>
 
   <tbody>
-   <% @indices.each do |index| %> 
       <tr>
-        <td><%= link_to 'Show', index %></td>
-        <td><%= link_to 'Edit', edit_index_path(index) %></td>
-        <td><%= link_to 'Destroy', index, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <form action="/sendphoto">
+          Select photo to send to S3:<br>
+          <input type="file" name="photo" >
+          <input type="submit" value="Send">
+        </form>
+        <br>
+
+        <form action="/rotatephoto">
+          <% @readedPhoto.each do |photo| %>
+            <input type="radio" name="choosen_photo" value=<%= photo.key %>><%= photo.key %>
+            <br>
+          <% end %>
+          <input type="submit" name="rotateButton" value="Rotate">
+          <input type="submit" formaction="/deletephoto" name="deleteButton" value="Delete">
+        </form>
       </tr>
-    <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Index', new_index_path %>

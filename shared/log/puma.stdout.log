@@ -181,3 +181,2656 @@ Exiting
 [27112] === puma shutdown: 2019-09-07 12:35:13 +0000 ===
 [27112] - Goodbye!
 Exiting
+=== puma startup: 2019-09-09 12:01:05 +0200 ===
+[16552] * Starting control server on unix:///tmp/puma-status-1568023265691-16552
+[16552] - Worker 0 (pid: 16616) booted, phase: 0
+[16552] - Gracefully shutting down workers...
+[16552] === puma shutdown: 2019-09-09 12:02:28 +0200 ===
+[16552] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:02:52 +0200 ===
+[20623] * Starting control server on unix:///tmp/puma-status-1568023372024-20623
+[20623] - Worker 0 (pid: 20803) booted, phase: 0
+[20623] - Gracefully shutting down workers...
+[20623] === puma shutdown: 2019-09-09 12:12:37 +0200 ===
+[20623] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:19:28 +0200 ===
+[11522] * Starting control server on unix:///tmp/puma-status-1568024368778-11522
+[11522] - Worker 0 (pid: 11529) booted, phase: 0
+[11522] - Gracefully shutting down workers...
+[11522] === puma shutdown: 2019-09-09 12:19:42 +0200 ===
+[11522] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:20:06 +0200 ===
+[11580] * Starting control server on unix:///tmp/puma-status-1568024406009-11580
+[11580] - Worker 0 (pid: 11589) booted, phase: 0
+[11580] - Gracefully shutting down workers...
+[11580] === puma shutdown: 2019-09-09 12:23:23 +0200 ===
+[11580] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:44:54 +0200 ===
+[14192] * Starting control server on unix:///tmp/puma-status-1568025894949-14192
+[14192] - Worker 0 (pid: 14201) booted, phase: 0
+[14192] - Gracefully shutting down workers...
+[14192] === puma shutdown: 2019-09-09 12:45:41 +0200 ===
+[14192] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:46:00 +0200 ===
+[14260] * Starting control server on unix:///tmp/puma-status-1568025960475-14260
+[14260] - Worker 0 (pid: 14269) booted, phase: 0
+[14260] - Gracefully shutting down workers...
+[14260] === puma shutdown: 2019-09-09 12:46:13 +0200 ===
+[14260] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:46:40 +0200 ===
+[14309] * Starting control server on unix:///tmp/puma-status-1568026000273-14309
+[14309] - Worker 0 (pid: 14316) booted, phase: 0
+[14309] - Gracefully shutting down workers...
+[14309] === puma shutdown: 2019-09-09 12:46:52 +0200 ===
+[14309] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:52:22 +0200 ===
+[14470] * Starting control server on unix:///tmp/puma-status-1568026342659-14470
+[14470] - Worker 0 (pid: 14479) booted, phase: 0
+Started GET "/" for ::1 at 2019-09-09 12:52:30 +0200
+  
+ActiveRecord::ConnectionTimeoutError (could not obtain a connection from the pool within 5.000 seconds (waited 5.004 seconds); all pooled connections were in use):
+  
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:222:in `block in wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `loop'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:172:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:298:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `block in poll'
+/usr/share/rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:176:in `synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:867:in `acquire_connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:587:in `checkout'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:431:in `connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1111:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:231:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:199:in `connection'
+activerecord (6.0.0) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/kh" for ::1 at 2019-09-09 12:52:54 +0200
+  
+ActiveRecord::ConnectionTimeoutError (could not obtain a connection from the pool within 5.000 seconds (waited 5.002 seconds); all pooled connections were in use):
+  
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:222:in `block in wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `loop'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:172:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:298:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `block in poll'
+/usr/share/rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:176:in `synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:867:in `acquire_connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:587:in `checkout'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:431:in `connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1111:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:231:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:199:in `connection'
+activerecord (6.0.0) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[14470] - Gracefully shutting down workers...
+[14470] === puma shutdown: 2019-09-09 12:53:18 +0200 ===
+[14470] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:53:43 +0200 ===
+[14556] * Starting control server on unix:///tmp/puma-status-1568026423370-14556
+[14556] - Worker 0 (pid: 14566) booted, phase: 0
+Started GET "/kh" for ::1 at 2019-09-09 12:53:45 +0200
+  
+ActiveRecord::ConnectionTimeoutError (could not obtain a connection from the pool within 5.000 seconds (waited 5.001 seconds); all pooled connections were in use):
+  
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:222:in `block in wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `loop'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:172:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:298:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `block in poll'
+/usr/share/rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:176:in `synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:867:in `acquire_connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:587:in `checkout'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:431:in `connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1111:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:231:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:199:in `connection'
+activerecord (6.0.0) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[14556] - Gracefully shutting down workers...
+[14556] === puma shutdown: 2019-09-09 12:54:43 +0200 ===
+[14556] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:54:49 +0200 ===
+[14676] * Starting control server on unix:///tmp/puma-status-1568026489210-14676
+[14676] - Worker 0 (pid: 14695) booted, phase: 0
+Started GET "/" for ::1 at 2019-09-09 12:54:54 +0200
+  
+ActiveRecord::ConnectionTimeoutError (could not obtain a connection from the pool within 5.000 seconds (waited 5.001 seconds); all pooled connections were in use):
+  
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:222:in `block in wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `loop'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:172:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:298:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `block in poll'
+/usr/share/rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:176:in `synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:867:in `acquire_connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:587:in `checkout'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:431:in `connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1111:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:231:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:199:in `connection'
+activerecord (6.0.0) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[14676] - Gracefully shutting down workers...
+[14676] === puma shutdown: 2019-09-09 12:56:27 +0200 ===
+[14676] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:56:32 +0200 ===
+[14771] * Starting control server on unix:///tmp/puma-status-1568026592417-14771
+[14771] - Worker 0 (pid: 14780) booted, phase: 0
+Started GET "/" for ::1 at 2019-09-09 12:56:35 +0200
+  
+ActiveRecord::ConnectionTimeoutError (could not obtain a connection from the pool within 5.000 seconds (waited 5.001 seconds); all pooled connections were in use):
+  
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:222:in `block in wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `loop'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:172:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:298:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `block in poll'
+/usr/share/rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:176:in `synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:867:in `acquire_connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:587:in `checkout'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:431:in `connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1111:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:231:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:199:in `connection'
+activerecord (6.0.0) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[14771] - Gracefully shutting down workers...
+[14771] === puma shutdown: 2019-09-09 12:57:32 +0200 ===
+[14771] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:57:37 +0200 ===
+[14825] * Starting control server on unix:///tmp/puma-status-1568026657590-14825
+[14825] - Worker 0 (pid: 14834) booted, phase: 0
+Started GET "/" for ::1 at 2019-09-09 12:57:42 +0200
+  
+ActiveRecord::ConnectionTimeoutError (could not obtain a connection from the pool within 5.000 seconds (waited 5.001 seconds); all pooled connections were in use):
+  
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:222:in `block in wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `loop'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:211:in `wait_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:172:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:298:in `internal_poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `block in poll'
+/usr/share/rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:176:in `synchronize'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:166:in `poll'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:867:in `acquire_connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:587:in `checkout'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:431:in `connection'
+activerecord (6.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1111:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:231:in `retrieve_connection'
+activerecord (6.0.0) lib/active_record/connection_handling.rb:199:in `connection'
+activerecord (6.0.0) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[14825] - Gracefully shutting down workers...
+[14825] === puma shutdown: 2019-09-09 12:59:01 +0200 ===
+[14825] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 12:59:07 +0200 ===
+[14910] * Starting control server on unix:///tmp/puma-status-1568026747281-14910
+[14910] - Worker 0 (pid: 14919) booted, phase: 0
+Started GET "/" for ::1 at 2019-09-09 12:59:09 +0200
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/binarsummer/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/binarsummer/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 33.8ms | Allocations: 316)
+Completed 200 OK in 52ms (Views: 39.3ms | ActiveRecord: 0.0ms | Allocations: 1946)
+
+
+Started GET "/huh" for ::1 at 2019-09-09 12:59:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/huh"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/indices" for ::1 at 2019-09-09 12:59:27 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.9ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1281)
+Completed 200 OK in 4087ms (Views: 4078.4ms | ActiveRecord: 4.9ms | Allocations: 1174882)
+
+
+[14910] - Gracefully shutting down workers...
+[14910] === puma shutdown: 2019-09-09 13:11:07 +0200 ===
+[14910] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 13:29:52 +0200 ===
+[16351] * Starting control server on unix:///tmp/puma-status-1568028592335-16351
+[16351] - Worker 0 (pid: 16374) booted, phase: 0
+Started GET "/indices" for ::1 at 2019-09-09 13:29:54 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.6ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 24.6ms | Allocations: 1502)
+Completed 200 OK in 2690ms (Views: 2679.3ms | ActiveRecord: 3.4ms | Allocations: 1159019)
+
+
+Started GET "/indices/new" for ::1 at 2019-09-09 13:30:02 +0200
+Processing by IndicesController#new as HTML
+  Rendering indices/new.html.erb within layouts/application
+  Rendered indices/_form.html.erb (Duration: 22.9ms | Allocations: 3831)
+  Rendered indices/new.html.erb within layouts/application (Duration: 25.5ms | Allocations: 4192)
+Completed 200 OK in 53ms (Views: 37.2ms | ActiveRecord: 7.3ms | Allocations: 9670)
+
+
+Started POST "/indices" for ::1 at 2019-09-09 13:30:04 +0200
+Processing by IndicesController#create as HTML
+  Parameters: {"authenticity_token"=>"uYNuSOLsHJqmb+u77iZ/lnXeBXe9AbZhyc7gD0GjYl/mwBykegeR3CyDWqt/59sZ5JuscHQ52MTAzmFmI/ZApQ==", "commit"=>"Create Index"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:54:in `block in create'
+  [1m[36mIndex Create (2.6ms)[0m  [1m[32mINSERT INTO "indices" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-09-09 11:30:04.159950"], ["updated_at", "2019-09-09 11:30:04.159950"]]
+  ↳ app/controllers/indices_controller.rb:54:in `block in create'
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:54:in `block in create'
+Redirected to http://localhost:3000/indices/1
+Completed 302 Found in 58ms (ActiveRecord: 11.0ms | Allocations: 2718)
+
+
+Started GET "/indices/1" for ::1 at 2019-09-09 13:30:04 +0200
+Processing by IndicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIndex Load (0.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices" WHERE "indices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/indices_controller.rb:91:in `set_index'
+  Rendering indices/show.html.erb within layouts/application
+  Rendered indices/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 401)
+Completed 200 OK in 18ms (Views: 10.3ms | ActiveRecord: 0.8ms | Allocations: 5042)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:30:06 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.8ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 554.4ms | Allocations: 70705)
+Completed 500 Internal Server Error in 556ms (ActiveRecord: 0.8ms | Allocations: 70980)
+
+
+  
+ActionView::Template::Error (undefined method `send_mesage' for #<#<Class:0x00007fbbbcabd5e0>:0x00007fbbbcee4bf0>):
+    13:    <% @indices.each do |index| %> 
+    14:       <tr>
+    15:         <td><%= link_to 'Show', index %></td>
+    16:         <td><%= link_to 'send_mesage', send_mesage(index) %>Send Message</td>
+    17:         <td><%= link_to 'Destroy', index, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    18:       </tr>
+    19:     <% end %>
+  
+app/views/indices/index.html.erb:16
+app/views/indices/index.html.erb:13
+Started GET "/indices" for ::1 at 2019-09-09 13:30:49 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1549)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.5ms | Allocations: 6041)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:30:55 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 963)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.5ms | Allocations: 4498)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:30:57 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.8ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 945)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.8ms | Allocations: 4479)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:30:58 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.7ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 955)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.7ms | Allocations: 4489)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:30:59 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.4ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 955)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.4ms | Allocations: 4489)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:31:51 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 1109.7ms | Allocations: 136598)
+Completed 500 Internal Server Error in 1114ms (ActiveRecord: 0.5ms | Allocations: 137612)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `send_mesage' for #<#<Class:0x00007fbbbe6a6888>:0x00007fbbbe6a5000>):
+    13:    <% @indices.each do |index| %> 
+    14:       <tr>
+    15:         <td><%= link_to 'Show', index %></td>
+    16:         <td><%= link_to 'send_mesage',index, method: send_mesage %></td>
+    17:         <td><%= link_to 'Destroy', index, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    18:       </tr>
+    19:     <% end %>
+  
+app/views/indices/index.html.erb:16
+app/views/indices/index.html.erb:13
+Started GET "/indices" for ::1 at 2019-09-09 13:32:25 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.4ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1197)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.4ms | Allocations: 5656)
+
+
+Started GET "/indices/1" for ::1 at 2019-09-09 13:32:27 +0200
+Processing by IndicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIndex Load (0.6ms)[0m  [1m[34mSELECT "indices".* FROM "indices" WHERE "indices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/indices_controller.rb:91:in `set_index'
+  Rendering indices/show.html.erb within layouts/application
+  Rendered indices/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 375)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.6ms | Allocations: 4589)
+
+
+Started GET "/indices/1/edit" for ::1 at 2019-09-09 13:32:30 +0200
+Processing by IndicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIndex Load (0.4ms)[0m  [1m[34mSELECT "indices".* FROM "indices" WHERE "indices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/indices_controller.rb:91:in `set_index'
+  Rendering indices/edit.html.erb within layouts/application
+  Rendered indices/_form.html.erb (Duration: 3.3ms | Allocations: 809)
+  Rendered indices/edit.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1204)
+Completed 200 OK in 22ms (Views: 14.1ms | ActiveRecord: 0.4ms | Allocations: 5405)
+
+
+Started PATCH "/indices/1" for ::1 at 2019-09-09 13:32:32 +0200
+Processing by IndicesController#update as HTML
+  Parameters: {"authenticity_token"=>"byt/sKtqcVH0efrVhak2T4AELKUkGAoP2ExhvCMMB4FItDMhcPV1+MWmaft7AjAkVwnmhj1sxJ6+pDaJcde4Qg==", "commit"=>"Update Index", "id"=>"1"}
+  [1m[36mIndex Load (0.7ms)[0m  [1m[34mSELECT "indices".* FROM "indices" WHERE "indices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/indices_controller.rb:91:in `set_index'
+Redirected to http://localhost:3000/indices/1
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms | Allocations: 1038)
+
+
+Started GET "/indices/1" for ::1 at 2019-09-09 13:32:32 +0200
+Processing by IndicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIndex Load (0.4ms)[0m  [1m[34mSELECT "indices".* FROM "indices" WHERE "indices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/indices_controller.rb:91:in `set_index'
+  Rendering indices/show.html.erb within layouts/application
+  Rendered indices/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 261)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 4322)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:32:33 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 953)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.5ms | Allocations: 4487)
+
+
+Started GET "/indices/1" for ::1 at 2019-09-09 13:32:35 +0200
+Processing by IndicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIndex Load (0.6ms)[0m  [1m[34mSELECT "indices".* FROM "indices" WHERE "indices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/indices_controller.rb:91:in `set_index'
+  Rendering indices/show.html.erb within layouts/application
+  Rendered indices/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 242)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 4302)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:32:36 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 951)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.5ms | Allocations: 4485)
+
+
+Started GET "/indices/1" for ::1 at 2019-09-09 13:32:37 +0200
+Processing by IndicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIndex Load (0.3ms)[0m  [1m[34mSELECT "indices".* FROM "indices" WHERE "indices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/indices_controller.rb:91:in `set_index'
+  Rendering indices/show.html.erb within layouts/application
+  Rendered indices/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 236)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 4302)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:32:39 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.7ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 952)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.7ms | Allocations: 4486)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:42:06 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.9ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1172)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.9ms | Allocations: 5612)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:42:17 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (1.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1139)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 1.1ms | Allocations: 5592)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:42:28 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (1.0ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1140)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 1.0ms | Allocations: 5597)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 13:49:10 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (1.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2736)
+Completed 200 OK in 32ms (Views: 25.8ms | ActiveRecord: 1.5ms | Allocations: 7588)
+
+
+Started GET "/sendmesage?message=dasda" for ::1 at 2019-09-09 13:49:12 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/sendmesage"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sendmesage?message=dasda" for ::1 at 2019-09-09 13:49:27 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"dasda"}
+Completed 500 Internal Server Error in 3326ms (ActiveRecord: 0.0ms | Allocations: 57282)
+
+
+  
+Aws::Errors::MissingRegionError (missing region; use :region option or export region name to ENV['AWS_REGION']):
+  
+app/controllers/indices_controller.rb:11:in `send_mesage'
+Started GET "/sendmesage?message=dasda" for ::1 at 2019-09-09 13:58:56 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"dasda"}
+Completed 500 Internal Server Error in 3085ms (ActiveRecord: 0.0ms | Allocations: 17376)
+
+
+  
+Aws::Errors::MissingCredentialsError (unable to sign request without credentials set):
+  
+app/controllers/indices_controller.rb:27:in `send_mesage'
+[16351] - Gracefully shutting down workers...
+[16351] === puma shutdown: 2019-09-09 14:07:13 +0200 ===
+[16351] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 14:22:11 +0200 ===
+[18542] * Starting control server on unix:///tmp/puma-status-1568031731132-18542
+[18542] - Worker 0 (pid: 18557) booted, phase: 0
+Started GET "/sendmesage?message=dasda" for ::1 at 2019-09-09 14:22:14 +0200
+  [1m[35m (12.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"dasda"}
+Completed 500 Internal Server Error in 3529ms (ActiveRecord: 0.0ms | Allocations: 46937)
+
+
+  
+Aws::Errors::MissingCredentialsError (unable to sign request without credentials set):
+  
+app/controllers/indices_controller.rb:27:in `send_mesage'
+[18542] - Gracefully shutting down workers...
+[18542] === puma shutdown: 2019-09-09 14:29:51 +0200 ===
+[18542] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 14:30:21 +0200 ===
+[18882] * Starting control server on unix:///tmp/puma-status-1568032221131-18882
+[18882] - Worker 0 (pid: 18894) booted, phase: 0
+Started GET "/sendmesage?message=dasda" for ::1 at 2019-09-09 14:30:25 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"dasda"}
+Completed 500 Internal Server Error in 3435ms (ActiveRecord: 0.0ms | Allocations: 46935)
+
+
+  
+Aws::Errors::MissingCredentialsError (unable to sign request without credentials set):
+  
+app/controllers/indices_controller.rb:27:in `send_mesage'
+Started GET "/" for ::1 at 2019-09-09 14:30:34 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/binarsummer/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/binarsummer/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 30.5ms | Allocations: 196)
+Completed 200 OK in 43ms (Views: 32.6ms | ActiveRecord: 0.0ms | Allocations: 854)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 14:30:41 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (1.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 29.1ms | Allocations: 3667)
+Completed 200 OK in 4521ms (Views: 4502.6ms | ActiveRecord: 12.4ms | Allocations: 1160828)
+
+
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 14:30:53 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 3020ms (ActiveRecord: 0.0ms | Allocations: 3691)
+
+
+  
+Aws::Errors::MissingCredentialsError (unable to sign request without credentials set):
+  
+app/controllers/indices_controller.rb:27:in `send_mesage'
+[18882] - Gracefully shutting down workers...
+[18882] === puma shutdown: 2019-09-09 14:33:55 +0200 ===
+[18882] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 14:47:25 +0200 ===
+[19492] * Starting control server on unix:///tmp/puma-status-1568033245909-19492
+[19492] - Worker 0 (pid: 19501) booted, phase: 0
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 14:47:31 +0200
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 3384ms (ActiveRecord: 0.0ms | Allocations: 46925)
+
+
+  
+Aws::Errors::MissingCredentialsError (unable to sign request without credentials set):
+  
+app/controllers/indices_controller.rb:27:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 14:53:19 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 712ms (ActiveRecord: 0.0ms | Allocations: 88542)
+
+
+  
+NameError (undefined local variable or method `credentials' for #<IndicesController:0x00005559e8003808>):
+  
+app/controllers/indices_controller.rb:13:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 14:54:01 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2336)
+
+
+  
+Aws::Errors::MissingCredentialsError (unable to sign request without credentials set):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 14:55:07 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2644)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae91243b8>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:04:54 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2694)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae91243b8>):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:08:09 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2640)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae91243b8>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:08:22 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2679)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae91243b8>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:14:43 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2618)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae91243b8>):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:15:00 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2679)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae91243b8>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:15:25 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1408)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/indices_controller.rb:29:in `[]'
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:15:58 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1429)
+
+
+  
+JSON::ParserError (784: unexpected token at 'hello'):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:16:19 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2679)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae91243b8>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:16:58 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2630)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae91243b8>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:17:26 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+
+[25, 34] in /home/binarsummer/PhotoApp/app/controllers/indices_controller.rb
+   25:     #   }
+   26:     #   entries[i] = obj
+   27:     #   i += 1
+   28:     # end
+   29:     byebug
+=> 30:     sqs.send_message(queue_url: 'https://sqs.us-west-2-amazonaws.com/801463284499/awsprojectqueue.fifo', message_body: params[:message].to_s)
+   31:     redirect_to action: "index"
+   32:   end
+   33: 
+   34:   # GET /indices/1
+(byebug) [19492] ! Terminating timed out worker: 19501
+[19492] - Worker 0 (pid: 20494) booted, phase: 0
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:19:31 +0200
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 398ms (ActiveRecord: 0.0ms | Allocations: 45126)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:19:52 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2689)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:19:58 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2627)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:20:12 +0200
+  
+SyntaxError (/home/binarsummer/PhotoApp/app/controllers/indices_controller.rb:29: syntax error, unexpected tLABEL
+....send_message(queue_url: https://sqs.us-west-2-amazonaws.com...
+...                         ^~~~~~
+/home/binarsummer/PhotoApp/app/controllers/indices_controller.rb:29: unknown regexp option - q
+/home/binarsummer/PhotoApp/app/controllers/indices_controller.rb:29: syntax error, unexpected ',', expecting end
+...463284499/awsprojectqueue.fifo, message_body: params[:messag...
+...                              ^
+/home/binarsummer/PhotoApp/app/controllers/indices_controller.rb:29: syntax error, unexpected ')', expecting end
+...ge_body: params[:message].to_s)
+...                              ^):
+  
+app/controllers/indices_controller.rb:29: syntax error, unexpected tLABEL
+app/controllers/indices_controller.rb:29: unknown regexp option - q
+app/controllers/indices_controller.rb:29: syntax error, unexpected ',', expecting end
+app/controllers/indices_controller.rb:29: syntax error, unexpected ')', expecting end
+app/controllers/indices_controller.rb:29: syntax error, unexpected tLABEL
+app/controllers/indices_controller.rb:29: unknown regexp option - q
+app/controllers/indices_controller.rb:29: syntax error, unexpected ',', expecting end
+app/controllers/indices_controller.rb:29: syntax error, unexpected ')', expecting end
+app/controllers/indices_controller.rb:29: syntax error, unexpected tLABEL
+app/controllers/indices_controller.rb:29: unknown regexp option - q
+app/controllers/indices_controller.rb:29: syntax error, unexpected ',', expecting end
+app/controllers/indices_controller.rb:29: syntax error, unexpected ')', expecting end
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:20:51 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2640)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:22:40 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2640)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:23:44 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2624)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:24:38 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2640)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:24:45 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2682)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:27:34 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2640)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:27:47 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 1969)
+
+
+  
+NoMethodError (undefined method `send_messages' for #<Aws::SQS::Client>
+Did you mean?  send_message):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:27:59 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 2680)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:28:22 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2630)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=hello" for ::1 at 2019-09-09 15:29:08 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"hello"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2643)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:29:22 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2627)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:31:27 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2640)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:29:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:33:01 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2565)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:15:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:33:19 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 744ms (ActiveRecord: 0.0ms | Allocations: 89810)
+
+
+  
+NameError (undefined local variable or method `awsprojectqueue' for #<IndicesController:0x00007f1ae9359a98>):
+  
+app/controllers/indices_controller.rb:15:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:33:40 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2565)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:15:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:35:12 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2565)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:15:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:35:16 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2555)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:15:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:39:04 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2565)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:15:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:41:03 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 3207)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:44:11 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1431)
+
+
+  
+JSON::ParserError (784: unexpected token at 'byebye'):
+  
+app/controllers/indices_controller.rb:32:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:44:41 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 706ms (ActiveRecord: 0.0ms | Allocations: 89800)
+
+
+  
+NameError (undefined local variable or method `messparams' for #<IndicesController:0x00007f1ae95a7890>):
+  
+app/controllers/indices_controller.rb:32:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:45:00 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3215)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:50:23 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1646)
+
+
+  
+ArgumentError (expected params[:entries][0][:message_group_id] to be a String, got value 1 (class: Integer) instead.):
+  
+app/controllers/indices_controller.rb:48:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:50:45 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2774)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:48:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:51:44 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2667)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:52:37 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2669)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:13:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:54:17 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2629)
+
+
+  
+NoMethodError (undefined method `set?' for #<Hash:0x00007f1ae8c68040>):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:55:30 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 3065ms (ActiveRecord: 0.0ms | Allocations: 4442)
+
+
+  
+Aws::Errors::MissingRegionError (missing region; use :region option or export region name to ENV['AWS_REGION']):
+  
+app/controllers/indices_controller.rb:11:in `send_mesage'
+[19492] - Gracefully shutting down workers...
+[19492] === puma shutdown: 2019-09-09 15:55:41 +0200 ===
+[19492] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 15:57:22 +0200 ===
+[21835] * Starting control server on unix:///tmp/puma-status-1568037442650-21835
+[21835] - Worker 0 (pid: 21845) booted, phase: 0
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:57:25 +0200
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 3345ms (ActiveRecord: 0.0ms | Allocations: 36159)
+
+
+  
+Aws::Errors::MissingRegionError (missing region; use :region option or export region name to ENV['AWS_REGION']):
+  
+app/controllers/indices_controller.rb:11:in `send_mesage'
+[21835] - Gracefully shutting down workers...
+[21835] === puma shutdown: 2019-09-09 15:57:32 +0200 ===
+[21835] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 15:58:59 +0200 ===
+[21909] * Starting control server on unix:///tmp/puma-status-1568037539748-21909
+[21909] - Worker 0 (pid: 21919) booted, phase: 0
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 15:59:02 +0200
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 3303ms (ActiveRecord: 0.0ms | Allocations: 46932)
+
+
+  
+Aws::Errors::MissingCredentialsError (unable to sign request without credentials set):
+  
+app/controllers/indices_controller.rb:28:in `send_mesage'
+[21909] - Gracefully shutting down workers...
+[21909] === puma shutdown: 2019-09-09 15:59:14 +0200 ===
+[21909] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 16:01:12 +0200 ===
+[21979] * Starting control server on unix:///tmp/puma-status-1568037672954-21979
+[21979] - Worker 0 (pid: 21991) booted, phase: 0
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:01:15 +0200
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 3340ms (ActiveRecord: 0.0ms | Allocations: 46930)
+
+
+  
+Aws::Errors::MissingCredentialsError (unable to sign request without credentials set):
+  
+app/controllers/indices_controller.rb:28:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:02:57 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 1676)
+
+
+  
+NoMethodError (undefined method `access_key_id' for #<Hash:0x00007f87350dc758>):
+  
+app/controllers/indices_controller.rb:13:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:03:26 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1239)
+
+
+  
+NoMethodError (undefined method `ACCESS_KEY_ID' for #<Hash:0x00007f87350dc758>):
+  
+app/controllers/indices_controller.rb:13:in `send_mesage'
+[21979] - Gracefully shutting down workers...
+[21979] === puma shutdown: 2019-09-09 16:03:32 +0200 ===
+[21979] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 16:04:40 +0200 ===
+[22229] * Starting control server on unix:///tmp/puma-status-1568037880034-22229
+[22229] - Worker 0 (pid: 22250) booted, phase: 0
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:04:43 +0200
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 0.0ms | Allocations: 26695)
+
+
+  
+NoMethodError (undefined method `access_key_id' for #<Hash:0x00007feba4bdcd28>):
+  
+app/controllers/indices_controller.rb:13:in `send_mesage'
+[22229] - Gracefully shutting down workers...
+[22229] === puma shutdown: 2019-09-09 16:05:50 +0200 ===
+[22229] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 16:05:56 +0200 ===
+[22317] * Starting control server on unix:///tmp/puma-status-1568037956204-22317
+[22317] - Worker 0 (pid: 22326) booted, phase: 0
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:05:59 +0200
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 3416ms (ActiveRecord: 0.0ms | Allocations: 47394)
+
+
+  
+Aws::Errors::MissingCredentialsError (unable to sign request without credentials set):
+  
+app/controllers/indices_controller.rb:31:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:06:52 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 4212ms (ActiveRecord: 0.0ms | Allocations: 7048)
+
+
+  
+Seahorse::Client::NetworkingError (Failed to open TCP connection to sqs.us-west-2-amazonaws.com:443 (getaddrinfo: Name or service not known)):
+  
+app/controllers/indices_controller.rb:31:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:07:19 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 2128ms (ActiveRecord: 0.0ms | Allocations: 6348)
+
+
+  
+Seahorse::Client::NetworkingError (Failed to open TCP connection to sqs.us-west-2-amazonaws.com:443 (getaddrinfo: Name or service not known)):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:08:37 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 2182ms (ActiveRecord: 0.0ms | Allocations: 6310)
+
+
+  
+Seahorse::Client::NetworkingError (Failed to open TCP connection to sqs.us-west-2-amazonaws.com:443 (getaddrinfo: Name or service not known)):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:12:46 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 1755ms (ActiveRecord: 0.0ms | Allocations: 2818)
+
+
+  
+Aws::SQS::Errors::SignatureDoesNotMatch (The request signature we calculated does not match the signature you provided. Check your AWS Secret Access Key and signing method. Consult the service documentation for details.
+
+The Canonical String for this request should have been
+'POST
+/801463284499/awsprojectqueue.fifo
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:sqs.us-west-2.amazonaws.com
+x-amz-content-sha256:dfcb581db70512d40d8f7fb828fd28af69b83711f2412d52ff99e77b41572823
+x-amz-date:20190909T141247Z
+
+content-type;host;x-amz-content-sha256;x-amz-date
+dfcb581db70512d40d8f7fb828fd28af69b83711f2412d52ff99e77b41572823'
+
+The String-to-Sign should have been
+'AWS4-HMAC-SHA256
+20190909T141247Z
+20190909/us-west-2/sqs/aws4_request
+6f7896425ee652fbe24eea377dcabed089482b59992a8cea0e64fe8d0535d49f'
+):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:18:33 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 1933ms (ActiveRecord: 0.0ms | Allocations: 2774)
+
+
+  
+Aws::SQS::Errors::SignatureDoesNotMatch (The request signature we calculated does not match the signature you provided. Check your AWS Secret Access Key and signing method. Consult the service documentation for details.
+
+The Canonical String for this request should have been
+'POST
+/801463284499/awsprojectqueue.fifo
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:sqs.us-west-2.amazonaws.com
+x-amz-content-sha256:dfcb581db70512d40d8f7fb828fd28af69b83711f2412d52ff99e77b41572823
+x-amz-date:20190909T141834Z
+
+content-type;host;x-amz-content-sha256;x-amz-date
+dfcb581db70512d40d8f7fb828fd28af69b83711f2412d52ff99e77b41572823'
+
+The String-to-Sign should have been
+'AWS4-HMAC-SHA256
+20190909T141834Z
+20190909/us-west-2/sqs/aws4_request
+136f94f2ffc1d8fcd9d2dc2e3e5c2ab16d4741746b94d286f70ef65204b06d40'
+):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:24:54 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 3562ms (ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+  
+Aws::SQS::Errors::SignatureDoesNotMatch (The request signature we calculated does not match the signature you provided. Check your AWS Secret Access Key and signing method. Consult the service documentation for details.
+
+The Canonical String for this request should have been
+'POST
+/801463284499/awsprojectqueue.fifo
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:sqs.us-west-2.amazonaws.com
+x-amz-content-sha256:dfcb581db70512d40d8f7fb828fd28af69b83711f2412d52ff99e77b41572823
+x-amz-date:20190909T142504Z
+
+content-type;host;x-amz-content-sha256;x-amz-date
+dfcb581db70512d40d8f7fb828fd28af69b83711f2412d52ff99e77b41572823'
+
+The String-to-Sign should have been
+'AWS4-HMAC-SHA256
+20190909T142504Z
+20190909/us-west-2/sqs/aws4_request
+c415adcb98fd097bdedd47e74cb8a3bd124146751f727f687d9135553f24681e'
+):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+[22317] - Gracefully shutting down workers...
+[22317] === puma shutdown: 2019-09-09 16:29:49 +0200 ===
+[22317] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 16:29:56 +0200 ===
+[23172] * Starting control server on unix:///tmp/puma-status-1568039396803-23172
+[23172] - Worker 0 (pid: 23181) booted, phase: 0
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:30:00 +0200
+  [1m[35m (8.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Completed 500 Internal Server Error in 2125ms (ActiveRecord: 0.0ms | Allocations: 45828)
+
+
+  
+Aws::SQS::Errors::MissingParameter (The request must contain the parameter MessageGroupId.):
+  
+app/controllers/indices_controller.rb:30:in `send_mesage'
+Started GET "/sendmesage?message=byebye" for ::1 at 2019-09-09 16:30:32 +0200
+Processing by IndicesController#send_mesage as HTML
+  Parameters: {"message"=>"byebye"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1033ms (ActiveRecord: 0.0ms | Allocations: 8563)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 16:30:33 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.8ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 3115)
+Completed 200 OK in 4188ms (Views: 4164.8ms | ActiveRecord: 12.0ms | Allocations: 1159990)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 16:40:03 +0200
+Processing by IndicesController#index as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 2007)
+
+
+  
+NameError (uninitialized constant IndicesController::S3_BUCKET):
+  
+app/controllers/indices_controller.rb:104:in `set_s3_direct_post'
+Started GET "/indices" for ::1 at 2019-09-09 16:52:17 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (7.9ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 47.1ms | Allocations: 2711)
+Completed 200 OK in 97ms (Views: 80.6ms | ActiveRecord: 7.9ms | Allocations: 7510)
+
+
+Started GET "/sendphoto" for ::1 at 2019-09-09 16:52:20 +0200
+Processing by IndicesController#send_photo as HTML
+Completed 406 Not Acceptable in 2675ms (ActiveRecord: 0.0ms | Allocations: 109137)
+
+
+  
+ActionController::MissingExactTemplate (IndicesController#send_photo is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sendphoto" for ::1 at 2019-09-09 16:58:24 +0200
+Processing by IndicesController#send_photo as HTML
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 2297ms (ActiveRecord: 0.0ms | Allocations: 4191)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 16:58:27 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (12.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 35.0ms | Allocations: 2690)
+Completed 200 OK in 86ms (Views: 56.8ms | ActiveRecord: 12.1ms | Allocations: 7454)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:01:38 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (429.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 910.9ms | Allocations: 819)
+Completed 200 OK in 1168ms (Views: 716.2ms | ActiveRecord: 429.5ms | Allocations: 4349)
+
+
+[23172] - Gracefully shutting down workers...
+[23172] === puma shutdown: 2019-09-09 17:01:45 +0200 ===
+[23172] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 17:02:19 +0200 ===
+[24433] * Starting control server on unix:///tmp/puma-status-1568041339543-24433
+[24433] - Worker 0 (pid: 24445) booted, phase: 0
+Started GET "/indices" for ::1 at 2019-09-09 17:02:22 +0200
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (1.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 38.2ms | Allocations: 3159)
+Completed 200 OK in 4158ms (Views: 4139.5ms | ActiveRecord: 11.3ms | Allocations: 1160654)
+
+
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 17:02:33 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Completed 500 Internal Server Error in 542ms (ActiveRecord: 0.0ms | Allocations: 123333)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - download.png):
+  
+app/controllers/indices_controller.rb:38:in `send_photo'
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 17:30:23 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 2232ms (ActiveRecord: 0.0ms | Allocations: 10674)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:30:26 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (1.0ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 4033)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.0ms | Allocations: 5415)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    23:           <input type="file" name="photo" >
+    24:           <input type="submit" value="Submit">
+    25:         </form>
+    26:         <% @readedPhoto.each do |photo| %>
+    27:           <img src=<% photo %>>
+    28:         <% end %>
+    29: 
+  
+app/views/indices/index.html.erb:26
+app/views/indices/index.html.erb:13
+Started GET "/indices" for ::1 at 2019-09-09 17:30:51 +0200
+Processing by IndicesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2323)
+
+
+  
+NoMethodError (undefined method `read' for nil:NilClass):
+  
+app/controllers/indices_controller.rb:39:in `get_photos'
+app/controllers/indices_controller.rb:6:in `index'
+Started GET "/indices" for ::1 at 2019-09-09 17:34:37 +0200
+Processing by IndicesController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2473)
+
+
+  
+NoMethodError (undefined method `read' for #<Aws::S3::Object:0x00007f0072e198c0>
+Did you mean?  reload):
+  
+app/controllers/indices_controller.rb:39:in `get_photos'
+app/controllers/indices_controller.rb:6:in `index'
+Started GET "/indices" for ::1 at 2019-09-09 17:36:25 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.7ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 32.5ms | Allocations: 3969)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 14.5ms | Allocations: 6265)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Aws::S3::Object:0x00007f0071b7eb98>):
+    23:           <input type="file" name="photo" >
+    24:           <input type="submit" value="Submit">
+    25:         </form>
+    26:         <% @readedPhoto.each do |photo| %>
+    27:           <img src=<% photo %>>
+    28:         <% end %>
+    29: 
+  
+app/views/indices/index.html.erb:26
+app/views/indices/index.html.erb:13
+Started GET "/indices" for ::1 at 2019-09-09 17:37:02 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1018)
+Completed 200 OK in 24ms (Views: 17.0ms | ActiveRecord: 0.5ms | Allocations: 6989)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:37:39 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.7ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2380)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms | Allocations: 4905)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Aws::S3::Object:0x00007f00728a5858>):
+    23:           <input type="file" name="photo" >
+    24:           <input type="submit" value="Submit">
+    25:         </form>
+    26:           <img src=<% @readedPhoto.name %>>
+    27:       </tr>
+    28:     <% end %>
+    29:   </tbody>
+  
+app/views/indices/index.html.erb:26
+app/views/indices/index.html.erb:13
+Started GET "/indices" for ::1 at 2019-09-09 17:43:27 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (1.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1061)
+Completed 200 OK in 23ms (Views: 17.6ms | ActiveRecord: 1.1ms | Allocations: 7029)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:43:47 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1019)
+Completed 200 OK in 26ms (Views: 20.4ms | ActiveRecord: 0.5ms | Allocations: 6967)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:44:42 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.6ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1019)
+Completed 200 OK in 33ms (Views: 26.9ms | ActiveRecord: 0.6ms | Allocations: 6967)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:44:52 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices"[0m
+  ↳ app/views/indices/index.html.erb:13
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1011)
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 0.5ms | Allocations: 6959)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:45:11 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 384)
+Completed 200 OK in 76ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 6377)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:46:31 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1457)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3727)
+
+
+  
+ActionView::Template::Error (undefined method `key' for #<Aws::S3::Bucket name="awsprojectbuckett">):
+    22:           <input type="file" name="photo" >
+    23:           <input type="submit" value="Submit">
+    24:         </form>
+    25:           <%= @readedPhoto.key %>
+    26:       </tr>
+    27:   </tbody>
+    28: </table>
+  
+app/views/indices/index.html.erb:25
+Started GET "/indices" for ::1 at 2019-09-09 17:48:02 +0200
+Processing by IndicesController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2872)
+
+
+  
+NoMethodError (undefined method `with_prefix' for #<Aws::Resources::Collection:0x00007f0072a1a5a8>
+Did you mean?  with_options):
+  
+app/controllers/indices_controller.rb:38:in `get_photos'
+app/controllers/indices_controller.rb:6:in `index'
+Started GET "/indices" for ::1 at 2019-09-09 17:48:20 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1620)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3902)
+
+
+  
+ActionView::Template::Error (undefined method `key' for #<Aws::Resources::Collection:0x00007f0072d31750>):
+    22:           <input type="file" name="photo" >
+    23:           <input type="submit" value="Submit">
+    24:         </form>
+    25:           <%= @readedPhoto.key %>
+    26:       </tr>
+    27:   </tbody>
+    28: </table>
+  
+app/views/indices/index.html.erb:25
+Started GET "/indices" for ::1 at 2019-09-09 17:48:30 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 385)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 6332)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:50:55 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2274.1ms | Allocations: 7756)
+Completed 200 OK in 2289ms (Views: 2284.5ms | ActiveRecord: 0.0ms | Allocations: 13683)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:52:29 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2584.8ms | Allocations: 7471)
+Completed 200 OK in 2600ms (Views: 2595.5ms | ActiveRecord: 0.0ms | Allocations: 13398)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:56:05 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1903.7ms | Allocations: 3310)
+Completed 200 OK in 1930ms (Views: 1925.5ms | ActiveRecord: 0.0ms | Allocations: 9237)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:57:36 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2046.2ms | Allocations: 3316)
+Completed 200 OK in 2071ms (Views: 2065.9ms | ActiveRecord: 0.0ms | Allocations: 9243)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 17:58:00 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2243.9ms | Allocations: 3330)
+Completed 200 OK in 2268ms (Views: 2263.5ms | ActiveRecord: 0.0ms | Allocations: 9257)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:04:26 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1869.5ms | Allocations: 3294)
+Completed 200 OK in 1895ms (Views: 1888.6ms | ActiveRecord: 0.0ms | Allocations: 9588)
+
+
+Started GET "/deletephoto?choosen_photo=download.png" for ::1 at 2019-09-09 18:04:34 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2258)
+
+
+  
+NoMethodError (undefined method `delete_objects' for #<Aws::S3::Resource>):
+  
+app/controllers/indices_controller.rb:38:in `delete_photo'
+Started GET "/deletephoto?choosen_photo=download.png" for ::1 at 2019-09-09 18:08:45 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2179)
+
+
+  
+ArgumentError (missing required parameter params[:delete][:objects][0][:key]):
+  
+app/controllers/indices_controller.rb:38:in `delete_photo'
+Started GET "/deletephoto?choosen_photo=download.png" for ::1 at 2019-09-09 18:09:24 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2179)
+
+
+  
+ArgumentError (missing required parameter params[:delete][:objects][0][:key]):
+  
+app/controllers/indices_controller.rb:38:in `delete_photo'
+Started GET "/deletephoto?choosen_photo=download.png" for ::1 at 2019-09-09 18:10:21 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2179)
+
+
+  
+ArgumentError (missing required parameter params[:delete][:objects][0][:key]):
+  
+app/controllers/indices_controller.rb:38:in `delete_photo'
+Started GET "/deletephoto?choosen_photo=download.png" for ::1 at 2019-09-09 18:12:22 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2255)
+
+
+  
+NoMethodError (undefined method `key' for nil:NilClass):
+  
+app/controllers/indices_controller.rb:42:in `delete_photo'
+Started GET "/deletephoto?choosen_photo=download.png" for ::1 at 2019-09-09 18:12:57 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png"}
+Completed 406 Not Acceptable in 1987ms (ActiveRecord: 0.0ms | Allocations: 5808)
+
+
+  
+ActionController::MissingExactTemplate (IndicesController#delete_photo is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/indices" for ::1 at 2019-09-09 18:13:28 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2151.5ms | Allocations: 2875)
+Completed 200 OK in 2178ms (Views: 2172.2ms | ActiveRecord: 0.0ms | Allocations: 8427)
+
+
+Started GET "/deletephoto?choosen_photo=test" for ::1 at 2019-09-09 18:13:39 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"test"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 2369ms (ActiveRecord: 0.0ms | Allocations: 4274)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:13:42 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 905.8ms | Allocations: 2693)
+Completed 200 OK in 919ms (Views: 913.9ms | ActiveRecord: 0.0ms | Allocations: 7714)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:14:39 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 907.4ms | Allocations: 2840)
+Completed 200 OK in 926ms (Views: 918.8ms | ActiveRecord: 0.0ms | Allocations: 8773)
+
+
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 18:14:45 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1278ms (ActiveRecord: 0.0ms | Allocations: 3855)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:14:46 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 320.9ms | Allocations: 2506)
+Completed 200 OK in 334ms (Views: 329.6ms | ActiveRecord: 0.0ms | Allocations: 7540)
+
+
+Started GET "/deletephoto?choosen_photo=on" for ::1 at 2019-09-09 18:15:00 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"on"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1121ms (ActiveRecord: 0.0ms | Allocations: 3907)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:15:01 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 954.3ms | Allocations: 2825)
+Completed 200 OK in 975ms (Views: 969.8ms | ActiveRecord: 0.0ms | Allocations: 7847)
+
+
+Started GET "/deletephoto?choosen_photo=on" for ::1 at 2019-09-09 18:15:06 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"on"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1139ms (ActiveRecord: 0.0ms | Allocations: 3894)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:15:07 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 953.3ms | Allocations: 2823)
+Completed 200 OK in 975ms (Views: 971.3ms | ActiveRecord: 0.0ms | Allocations: 7855)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:15:28 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1131.4ms | Allocations: 3053)
+Completed 200 OK in 1149ms (Views: 1144.3ms | ActiveRecord: 0.0ms | Allocations: 8987)
+
+
+Started GET "/deletephoto?choosen_photo=download.png" for ::1 at 2019-09-09 18:15:31 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1210ms (ActiveRecord: 0.0ms | Allocations: 3897)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:15:32 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 864.0ms | Allocations: 2620)
+Completed 200 OK in 876ms (Views: 872.4ms | ActiveRecord: 0.0ms | Allocations: 7653)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:15:53 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 916.3ms | Allocations: 2849)
+Completed 200 OK in 934ms (Views: 929.1ms | ActiveRecord: 0.0ms | Allocations: 8778)
+
+
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 18:15:59 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1260ms (ActiveRecord: 0.0ms | Allocations: 3822)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:16:00 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 338.5ms | Allocations: 2515)
+Completed 200 OK in 354ms (Views: 348.8ms | ActiveRecord: 0.0ms | Allocations: 7548)
+
+
+Started GET "/deletephoto?choosen_photo=" for ::1 at 2019-09-09 18:16:02 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>""}
+Completed 500 Internal Server Error in 1122ms (ActiveRecord: 0.0ms | Allocations: 6194)
+
+
+  
+Aws::S3::Errors::UserKeyMustBeSpecified (User key must be specified.):
+  
+app/controllers/indices_controller.rb:38:in `delete_photo'
+Started GET "/indices" for ::1 at 2019-09-09 18:16:27 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1108.0ms | Allocations: 3061)
+Completed 200 OK in 1131ms (Views: 1126.0ms | ActiveRecord: 0.0ms | Allocations: 8996)
+
+
+Started GET "/deletephoto?choosen_photo=download.png" for ::1 at 2019-09-09 18:16:31 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1234ms (ActiveRecord: 0.0ms | Allocations: 3888)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:16:33 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 852.5ms | Allocations: 2619)
+Completed 200 OK in 883ms (Views: 870.5ms | ActiveRecord: 0.0ms | Allocations: 7642)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:17:44 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 889.3ms | Allocations: 2819)
+Completed 200 OK in 906ms (Views: 899.7ms | ActiveRecord: 0.0ms | Allocations: 9108)
+
+
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 18:17:50 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1145ms (ActiveRecord: 0.0ms | Allocations: 4187)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:17:51 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 305.2ms | Allocations: 2503)
+Completed 200 OK in 319ms (Views: 315.2ms | ActiveRecord: 0.0ms | Allocations: 7526)
+
+
+Started GET "/sendphoto?photo=test.png" for ::1 at 2019-09-09 18:18:41 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"test.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 2171ms (ActiveRecord: 0.0ms | Allocations: 3852)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:18:43 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 370.2ms | Allocations: 2709)
+Completed 200 OK in 384ms (Views: 379.2ms | ActiveRecord: 0.0ms | Allocations: 7733)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:22:27 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2114.2ms | Allocations: 3275)
+Completed 200 OK in 2135ms (Views: 2129.9ms | ActiveRecord: 0.0ms | Allocations: 9209)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:22:56 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 985.2ms | Allocations: 3272)
+Completed 200 OK in 1011ms (Views: 1005.4ms | ActiveRecord: 0.0ms | Allocations: 9200)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:24:31 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  [1m[36mIndex Load (0.5ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.0ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.0ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Index Load (0.1ms)[0m  [1m[34mSELECT "indices".* FROM "indices" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered indices/index.html.erb within layouts/application (Duration: 3145.7ms | Allocations: 159403)
+Completed 500 Internal Server Error in 3155ms (ActiveRecord: 13.9ms | Allocations: 161925)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `i' for #<#<Class:0x00007f0071f576e8>:0x00007f0071f559d8>
+Did you mean?  @@id):
+    27:         <form action="/deletephoto">
+    28:           i=0
+    29:           <% @readedPhoto.each do |photo| %>
+    30:             <input type="radio" name="choosen_photo<%= i %>" value=<%= photo.key %>><%= photo.key %>
+    31:             <br>
+    32:             i++
+    33:           <% end %>
+  
+app/views/indices/index.html.erb:30
+app/views/indices/index.html.erb:29
+Started GET "/indices" for ::1 at 2019-09-09 18:25:53 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2226.9ms | Allocations: 3286)
+Completed 200 OK in 2249ms (Views: 2241.0ms | ActiveRecord: 0.0ms | Allocations: 9582)
+
+
+Started GET "/deletephoto?choosen_photo0=download.png" for ::1 at 2019-09-09 18:28:04 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo0"=>"download.png"}
+Completed 500 Internal Server Error in 624ms (ActiveRecord: 0.0ms | Allocations: 90339)
+
+
+  
+NameError (undefined local variable or method `i' for #<IndicesController:0x00007f00729a2fd0>):
+  
+app/controllers/indices_controller.rb:39:in `delete_photo'
+Started GET "/deletephoto?choosen_photo0=download.png" for ::1 at 2019-09-09 18:28:26 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo0"=>"download.png"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2272)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/indices_controller.rb:39:in `delete_photo'
+Started GET "/deletephoto?choosen_photo0=download.png" for ::1 at 2019-09-09 18:29:43 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo0"=>"download.png"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2232)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/indices_controller.rb:39:in `delete_photo'
+Started GET "/deletephoto?choosen_photo0=download.png" for ::1 at 2019-09-09 18:30:44 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo0"=>"download.png"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2234)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/indices_controller.rb:39:in `delete_photo'
+Started GET "/deletephoto?choosen_photo1=test.png" for ::1 at 2019-09-09 18:31:17 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo1"=>"test.png"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2232)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/indices_controller.rb:39:in `delete_photo'
+Started GET "/deletephoto?choosen_photo1=test.png" for ::1 at 2019-09-09 18:31:36 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo1"=>"test.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 2041)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:31:37 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2163.1ms | Allocations: 4231)
+Completed 500 Internal Server Error in 2170ms (ActiveRecord: 0.0ms | Allocations: 6490)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    28:           <% @readedPhoto.each do |photo| %>
+    29:             <input type="radio" name="choosen_photo<%= @i %>" value=<%= photo.key %>><%= photo.key %>
+    30:             <br>
+    31:             <% @i += 1 %>
+    32:           <% end %>
+    33:           <input type="submit" value="Delete">
+    34:         </form>
+  
+app/views/indices/index.html.erb:31
+app/views/indices/index.html.erb:28
+Started GET "/indices" for ::1 at 2019-09-09 18:31:58 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1938.4ms | Allocations: 3021)
+Completed 200 OK in 1955ms (Views: 1949.1ms | ActiveRecord: 0.0ms | Allocations: 8565)
+
+
+Started GET "/deletephoto?choosen_photo0=download.png" for ::1 at 2019-09-09 18:32:02 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo0"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 2019)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:32:02 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1112.8ms | Allocations: 3035)
+Completed 200 OK in 1137ms (Views: 1132.6ms | ActiveRecord: 0.0ms | Allocations: 8069)
+
+
+Started GET "/deletephoto?choosen_photo0=download.png" for ::1 at 2019-09-09 18:33:27 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo0"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms | Allocations: 2038)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:33:27 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1092.2ms | Allocations: 3059)
+Completed 200 OK in 1111ms (Views: 1104.7ms | ActiveRecord: 0.0ms | Allocations: 8573)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:34:26 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 977.3ms | Allocations: 4055)
+Completed 500 Internal Server Error in 987ms (ActiveRecord: 0.0ms | Allocations: 6601)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into String):
+    26: 
+    27:         <form action="/deletephoto">
+    28:           <% @readedPhoto.each do |photo| %>
+    29:             <input type="radio" name="choosen_photo<%= @i %>" value=<%= photo.key + @i%>><%= photo.key %>
+    30:             <br>
+    31:             <% @i += 1 %>
+    32:           <% end %>
+  
+app/views/indices/index.html.erb:29:in `+'
+app/views/indices/index.html.erb:29
+app/views/indices/index.html.erb:28
+Started GET "/indices" for ::1 at 2019-09-09 18:34:39 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1098.6ms | Allocations: 3308)
+Completed 200 OK in 1171ms (Views: 1166.4ms | ActiveRecord: 0.0ms | Allocations: 9258)
+
+
+Started GET "/deletephoto?choosen_photo0=download.png0" for ::1 at 2019-09-09 18:34:44 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo0"=>"download.png0"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 1648)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:34:44 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 947.5ms | Allocations: 3039)
+Completed 200 OK in 963ms (Views: 955.5ms | ActiveRecord: 0.0ms | Allocations: 8064)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:36:04 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1066.4ms | Allocations: 3227)
+Completed 200 OK in 1094ms (Views: 1086.5ms | ActiveRecord: 0.0ms | Allocations: 9522)
+
+
+Started GET "/deletephoto?choosen_photo=download.png" for ::1 at 2019-09-09 18:36:09 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1111ms (ActiveRecord: 0.0ms | Allocations: 4253)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:36:10 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 971.2ms | Allocations: 2819)
+Completed 200 OK in 994ms (Views: 987.5ms | ActiveRecord: 0.0ms | Allocations: 7852)
+
+
+Started GET "/sendphoto?photo=download.png" for ::1 at 2019-09-09 18:36:16 +0200
+Processing by IndicesController#send_photo as HTML
+  Parameters: {"photo"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1153ms (ActiveRecord: 0.0ms | Allocations: 3858)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:36:17 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 309.2ms | Allocations: 2703)
+Completed 200 OK in 326ms (Views: 318.5ms | ActiveRecord: 0.0ms | Allocations: 7725)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:38:18 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1955.3ms | Allocations: 3276)
+Completed 200 OK in 1973ms (Views: 1968.3ms | ActiveRecord: 0.0ms | Allocations: 9217)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:41:51 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2067.4ms | Allocations: 3224)
+Completed 200 OK in 2087ms (Views: 2079.5ms | ActiveRecord: 0.0ms | Allocations: 9511)
+
+
+Started GET "/rotatephoto" for ::1 at 2019-09-09 18:41:57 +0200
+Processing by IndicesController#rotate_photo as HTML
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms | Allocations: 17266)
+
+
+  
+ArgumentError (expected params[:message_group_id] to be a String, got value 89 (class: Integer) instead.):
+  
+app/controllers/indices_controller.rb:15:in `rotate_photo'
+Started GET "/indices" for ::1 at 2019-09-09 18:42:25 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2063.5ms | Allocations: 3025)
+Completed 200 OK in 2136ms (Views: 2081.8ms | ActiveRecord: 0.0ms | Allocations: 8578)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:44:20 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1978.9ms | Allocations: 3267)
+Completed 200 OK in 2006ms (Views: 2001.1ms | ActiveRecord: 0.0ms | Allocations: 9200)
+
+
+Started GET "/deletephoto?choosen_photo=download.png" for ::1 at 2019-09-09 18:44:25 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"choosen_photo"=>"download.png"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1095ms (ActiveRecord: 0.0ms | Allocations: 4255)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:44:26 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 994.3ms | Allocations: 2822)
+Completed 200 OK in 1012ms (Views: 1004.4ms | ActiveRecord: 0.0ms | Allocations: 7855)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:47:41 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1074.7ms | Allocations: 3053)
+Completed 200 OK in 1093ms (Views: 1086.1ms | ActiveRecord: 0.0ms | Allocations: 8991)
+
+
+Started GET "/rotatephoto?rotateButton=Rotate" for ::1 at 2019-09-09 18:47:45 +0200
+Processing by IndicesController#rotate_photo as HTML
+  Parameters: {"rotateButton"=>"Rotate"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1904ms (ActiveRecord: 0.0ms | Allocations: 5091)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 18:47:47 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1032.3ms | Allocations: 2858)
+Completed 200 OK in 1051ms (Views: 1047.4ms | ActiveRecord: 0.0ms | Allocations: 7891)
+
+
+Started GET "/deletephoto?deleteButton=Delete" for ::1 at 2019-09-09 18:47:51 +0200
+Processing by IndicesController#delete_photo as HTML
+  Parameters: {"deleteButton"=>"Delete"}
+Completed 500 Internal Server Error in 1259ms (ActiveRecord: 0.0ms | Allocations: 4022)
+
+
+  
+Aws::S3::Errors::UserKeyMustBeSpecified (User key must be specified.):
+  
+app/controllers/indices_controller.rb:49:in `delete_photo'
+Started GET "/rotatephoto?choosen_photo=test.png&rotateButton=Rotate" for ::1 at 2019-09-09 19:09:36 +0200
+Processing by IndicesController#rotate_photo as HTML
+  Parameters: {"choosen_photo"=>"test.png", "rotateButton"=>"Rotate"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 1890ms (ActiveRecord: 0.0ms | Allocations: 2637)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 19:09:38 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2110.2ms | Allocations: 2863)
+Completed 200 OK in 2141ms (Views: 2131.5ms | ActiveRecord: 0.0ms | Allocations: 7887)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 19:12:02 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2341.0ms | Allocations: 2824)
+Completed 200 OK in 2365ms (Views: 2358.1ms | ActiveRecord: 0.0ms | Allocations: 8364)
+
+
+Started GET "/rotatephoto?choosen_photo=test.png&rotateButton=Rotate" for ::1 at 2019-09-09 19:12:07 +0200
+Processing by IndicesController#rotate_photo as HTML
+  Parameters: {"choosen_photo"=>"test.png", "rotateButton"=>"Rotate"}
+Redirected to http://localhost:3000/indices
+Completed 302 Found in 2117ms (ActiveRecord: 0.0ms | Allocations: 3035)
+
+
+Started GET "/indices" for ::1 at 2019-09-09 19:12:09 +0200
+Processing by IndicesController#index as HTML
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2083.1ms | Allocations: 2826)
+Completed 200 OK in 2103ms (Views: 2098.9ms | ActiveRecord: 0.0ms | Allocations: 7859)
+
+
