@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :post_photos
   resources :indices
   get 'rotatephoto', to: 'indices#rotate_photo'
   get 'sendphoto', to: 'indices#send_photo'

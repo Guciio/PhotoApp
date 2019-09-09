@@ -138,7 +138,7 @@ class IndicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def index_params
-      params.fetch(:index, {})
+      params.fetch(:index, :image,{})
     end
 
 end
