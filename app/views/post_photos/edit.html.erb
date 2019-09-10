@@ -1,8 +1,8 @@
 <h1>Editing Photo</h1>
 
 <form action="/rotatephoto">
-  <input type="submit" name="rotateButton" value="Rotate">
-  <input type="submit" formaction="/deletephoto" name="deleteButton" value="Delete">
+  <button type="submit" name="Rotation" value=<%= @post_photo.image.key %>>Rotate</button>
+  <button type="submit" formaction="/deletephoto" name="Delete" value=<%= @post_photo.image.key %>>Delete</button>
 </form>
 
 <%= link_to 'Show', @post_photo %> |
