@@ -1,7 +1,7 @@
 class PostPhotosController < ApplicationController
   before_action :set_post_photo, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
-
+  require 'open-uri'
   # GET /post_photos
   # GET /post_photos.json
   def index
@@ -14,7 +14,7 @@ class PostPhotosController < ApplicationController
         access_key_id: Rails.application.credentials.aws[:access_key_id],
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
     sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
-                     message_body: "R:"+ params[:Rotation],
+                     message_body: rand(10..99).to_s + "R:"+ params[:Rotation],
                      message_group_id: rand(1..100).to_s)
     redirect_to action: "index"
   end
@@ -25,7 +25,7 @@ class PostPhotosController < ApplicationController
         access_key_id: Rails.application.credentials.aws[:access_key_id],
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
     sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
-                     message_body: "B:"+ params[:Blue],
+                     message_body: rand(10..99).to_s + "B:"+ params[:Blue],
                      message_group_id: rand(1..100).to_s)
     redirect_to action: "index"
   end
@@ -36,7 +36,7 @@ class PostPhotosController < ApplicationController
         access_key_id: Rails.application.credentials.aws[:access_key_id],
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
     sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
-                     message_body: "F:"+ params[:Flip],
+                     message_body: rand(10..99).to_s + "F:"+ params[:Flip],
                      message_group_id: rand(1..100).to_s)
     redirect_to action: "index"
   end
@@ -55,6 +55,18 @@ class PostPhotosController < ApplicationController
                 }
             ]
         })
+    redirect_to action: "index"
+  end
+
+  def download_photo
+    s3 = Aws::S3::Resource.new(
+        region: Rails.application.credentials.aws[:aws_region],
+        access_key_id: Rails.application.credentials.aws[:access_key_id],
+        secret_access_key: Rails.application.credentials.aws[:secret_access_key])
+    obj = s3.bucket('awsprojectbuckett').object(params[:Download])
+
+    IO.copy_stream(open(obj.presigned_url(:get, expires_in: 360)), params[:Download]+'.png')
+
     redirect_to action: "index"
   end
   # GET /post_photos/1
