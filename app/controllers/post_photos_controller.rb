@@ -36,7 +36,7 @@ class PostPhotosController < ApplicationController
         access_key_id: Rails.application.credentials.aws[:access_key_id],
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
     sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
-                     message_body: "C:"+ params[:Contrast],
+                     message_body: "C:"+ params[:Flip],
                      message_group_id: rand(1..100).to_s)
     redirect_to action: "index"
   end
