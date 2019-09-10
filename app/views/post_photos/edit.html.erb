@@ -3,6 +3,8 @@
 <form action="/rotatephoto">
   <button type="submit" name="Rotation" value=<%= @post_photo.image.key %>>Rotate</button>
   <button type="submit" formaction="/deletephoto" name="Delete" value=<%= @post_photo.image.key %>>Delete</button>
+  <button type="submit" formaction="/bluephoto" name="Blue" value=<%= @post_photo.image.key %>>Blue</button>
+  <button type="submit" formaction="/redphoto" name="Red" value=<%= @post_photo.image.key %>>Red</button>
 </form>
 
 <%= link_to 'Show', @post_photo %> |

@@ -19,6 +19,44 @@ class PostPhotosController < ApplicationController
     redirect_to action: "index"
   end
 
+  def blue_photo
+    sqs = Aws::SQS::Client.new(
+        region: Rails.application.credentials.aws[:aws_region],
+        access_key_id: Rails.application.credentials.aws[:access_key_id],
+        secret_access_key: Rails.application.credentials.aws[:secret_access_key])
+    sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
+                     message_body: "B:"+ params[:Blue],
+                     message_group_id: rand(1..100).to_s)
+    redirect_to action: "index"
+  end
+
+  def red_photo
+    sqs = Aws::SQS::Client.new(
+        region: Rails.application.credentials.aws[:aws_region],
+        access_key_id: Rails.application.credentials.aws[:access_key_id],
+        secret_access_key: Rails.application.credentials.aws[:secret_access_key])
+    sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
+                     message_body: "C:"+ params[:Red],
+                     message_group_id: rand(1..100).to_s)
+    redirect_to action: "index"
+  end
+
+  def delete_photo
+    s3 = Aws::S3::Client.new(
+        region: Rails.application.credentials.aws[:aws_region],
+        access_key_id: Rails.application.credentials.aws[:access_key_id],
+        secret_access_key: Rails.application.credentials.aws[:secret_access_key])
+    s3.delete_objects(
+        bucket: 'awsprojectbuckett',
+        delete: {
+            objects: [
+                {
+                    key: params[:Delete]
+                }
+            ]
+        })
+    redirect_to action: "index"
+  end
   # GET /post_photos/1
   # GET /post_photos/1.json
   def show

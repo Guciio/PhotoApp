@@ -7273,3 +7273,859 @@ Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.5ms | Allocations: 740
 [7144] === puma shutdown: 2019-09-10 14:20:30 +0200 ===
 [7144] - Goodbye!
 Exiting
+=== puma startup: 2019-09-10 16:39:13 +0200 ===
+[14532] * Starting control server on unix:///tmp/puma-status-1568126353316-14532
+[14532] - Worker 0 (pid: 14541) booted, phase: 0
+Started GET "/post_photos" for ::1 at 2019-09-10 16:39:17 +0200
+  [1m[35m (21.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (0.9ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 52.0ms | Allocations: 6537)
+Completed 200 OK in 4735ms (Views: 4708.7ms | ActiveRecord: 13.8ms | Allocations: 1166089)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 16:39:24 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.5ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 495.8ms | Allocations: 98854)
+Completed 200 OK in 518ms (Views: 491.6ms | ActiveRecord: 18.6ms | Allocations: 104359)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--49b15ca1772e2db4d0580e9044620ecf1f57ad6f/download.png" for ::1 at 2019-09-10 16:39:24 +0200
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--49b15ca1772e2db4d0580e9044620ecf1f57ad6f", "filename"=>"download"}
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[36m  S3 Storage (13.9ms) [0m[34mGenerated URL for file at key: qnhuvmtovtplvtnj7gb50uabwq0x (https://awsprojectbuckett.s3.us-west-2.amazonaws.com/qnhuvmtovtplvtnj7gb50uabwq0x?response-content-disposition=inline%3B%20filename%3D%22download.png%22%3B%20filename%2A%3DUTF-8%27%27download.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190910%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190910T143924Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1cbbd43da9ffe266c6daae738e72d2e789c56e947f09bc862099b18e6f3e2613)[0m
+Redirected to https://awsprojectbuckett.s3.us-west-2.amazonaws.com/qnhuvmtovtplvtnj7gb50uabwq0x?response-content-disposition=inline%3B%20filename%3D%22download.png%22%3B%20filename%2A%3DUTF-8%27%27download.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190910%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190910T143924Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1cbbd43da9ffe266c6daae738e72d2e789c56e947f09bc862099b18e6f3e2613
+Completed 302 Found in 27ms (ActiveRecord: 0.9ms | Allocations: 3647)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 16:39:26 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.5ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 21.0ms | Allocations: 2003)
+Completed 200 OK in 44ms (Views: 37.9ms | ActiveRecord: 1.8ms | Allocations: 7195)
+
+
+Started GET "/rotatephoto?Rotation=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 16:39:28 +0200
+Processing by PostPhotosController#rotate_photo as HTML
+  Parameters: {"Rotation"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 1945ms (ActiveRecord: 0.0ms | Allocations: 11029)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 16:39:30 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (0.9ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2654)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.9ms | Allocations: 7022)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 16:39:32 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.6ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2209)
+Completed 200 OK in 86ms (Views: 21.7ms | ActiveRecord: 2.3ms | Allocations: 7113)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 16:39:34 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.5ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1840)
+Completed 200 OK in 28ms (Views: 22.4ms | ActiveRecord: 2.9ms | Allocations: 6892)
+
+
+Started GET "/rotatephoto?Rotation=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 16:39:35 +0200
+Processing by PostPhotosController#rotate_photo as HTML
+  Parameters: {"Rotation"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 2164ms (ActiveRecord: 0.0ms | Allocations: 2910)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 16:39:37 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (0.8ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 2646)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.8ms | Allocations: 7013)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 17:30:00 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (1.2ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 2722)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 1.2ms | Allocations: 7089)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 17:30:02 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.4ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 14.6ms | Allocations: 2229)
+Completed 200 OK in 28ms (Views: 22.0ms | ActiveRecord: 2.7ms | Allocations: 7173)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--49b15ca1772e2db4d0580e9044620ecf1f57ad6f/download.png" for ::1 at 2019-09-10 17:30:02 +0200
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--49b15ca1772e2db4d0580e9044620ecf1f57ad6f", "filename"=>"download"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[36m  S3 Storage (16.5ms) [0m[34mGenerated URL for file at key: qnhuvmtovtplvtnj7gb50uabwq0x (https://awsprojectbuckett.s3.us-west-2.amazonaws.com/qnhuvmtovtplvtnj7gb50uabwq0x?response-content-disposition=inline%3B%20filename%3D%22download.png%22%3B%20filename%2A%3DUTF-8%27%27download.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190910%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190910T153002Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f3a6c0f26ff8a5fd7afc2a55f8117ea77469995fdae94f573630053f402d381d)[0m
+Redirected to https://awsprojectbuckett.s3.us-west-2.amazonaws.com/qnhuvmtovtplvtnj7gb50uabwq0x?response-content-disposition=inline%3B%20filename%3D%22download.png%22%3B%20filename%2A%3DUTF-8%27%27download.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190910%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190910T153002Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f3a6c0f26ff8a5fd7afc2a55f8117ea77469995fdae94f573630053f402d381d
+Completed 302 Found in 37ms (ActiveRecord: 0.5ms | Allocations: 2352)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 17:30:04 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.4ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1840)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 1.8ms | Allocations: 6892)
+
+
+Started GET "/rotatephoto?Rotation=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 17:30:06 +0200
+Processing by PostPhotosController#rotate_photo as HTML
+  Parameters: {"Rotation"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 976ms (ActiveRecord: 0.0ms | Allocations: 2932)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 17:30:07 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (1.3ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 2646)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 1.3ms | Allocations: 7013)
+
+
+[14532] - Gracefully shutting down workers...
+[14532] === puma shutdown: 2019-09-10 18:25:38 +0200 ===
+[14532] - Goodbye!
+Exiting
+=== puma startup: 2019-09-10 21:40:13 +0200 ===
+[5822] * Starting control server on unix:///tmp/puma-status-1568144413803-5822
+[5822] - Worker 0 (pid: 5835) booted, phase: 0
+Started GET "/indices" for ::1 at 2019-09-10 21:40:14 +0200
+  [1m[35m (24.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/indices"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/post_photos" for ::1 at 2019-09-10 21:40:20 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (8.9ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 50.3ms | Allocations: 6314)
+Completed 200 OK in 4609ms (Views: 4573.6ms | ActiveRecord: 25.2ms | Allocations: 1165331)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-10 21:40:41 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 25.3ms | Allocations: 3090)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 27.5ms | Allocations: 3447)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms | Allocations: 7985)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 21:40:47 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (0.7ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2646)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.7ms | Allocations: 7017)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 21:40:49 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.5ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (4.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (2.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 457.1ms | Allocations: 100078)
+Completed 200 OK in 516ms (Views: 443.8ms | ActiveRecord: 28.0ms | Allocations: 109315)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--49b15ca1772e2db4d0580e9044620ecf1f57ad6f/download.png" for ::1 at 2019-09-10 21:40:50 +0200
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--49b15ca1772e2db4d0580e9044620ecf1f57ad6f", "filename"=>"download"}
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[36m  S3 Storage (3.8ms) [0m[34mGenerated URL for file at key: qnhuvmtovtplvtnj7gb50uabwq0x (https://awsprojectbuckett.s3.us-west-2.amazonaws.com/qnhuvmtovtplvtnj7gb50uabwq0x?response-content-disposition=inline%3B%20filename%3D%22download.png%22%3B%20filename%2A%3DUTF-8%27%27download.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190910%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190910T194050Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1d17cfb1bd96297825f055824f07d8b87d29bd9bf1ce5c6192ab557ce7c0bafe)[0m
+Redirected to https://awsprojectbuckett.s3.us-west-2.amazonaws.com/qnhuvmtovtplvtnj7gb50uabwq0x?response-content-disposition=inline%3B%20filename%3D%22download.png%22%3B%20filename%2A%3DUTF-8%27%27download.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190910%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190910T194050Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1d17cfb1bd96297825f055824f07d8b87d29bd9bf1ce5c6192ab557ce7c0bafe
+Completed 302 Found in 16ms (ActiveRecord: 1.1ms | Allocations: 2637)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 21:40:51 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.7ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 19.6ms | Allocations: 2009)
+Completed 200 OK in 79ms (Views: 72.2ms | ActiveRecord: 3.0ms | Allocations: 7210)
+
+
+Started GET "/rotatephoto?Rotation=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 21:40:53 +0200
+Processing by PostPhotosController#rotate_photo as HTML
+  Parameters: {"Rotation"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 962ms (ActiveRecord: 0.0ms | Allocations: 11046)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 21:40:54 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (1.2ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 2647)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 1.2ms | Allocations: 7015)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 21:40:56 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.5ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2211)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 2.5ms | Allocations: 7111)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 21:40:57 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (4.2ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1841)
+Completed 200 OK in 46ms (Views: 37.3ms | ActiveRecord: 5.7ms | Allocations: 6895)
+
+
+Started GET "/rotatephoto?Rotation=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 21:40:59 +0200
+Processing by PostPhotosController#rotate_photo as HTML
+  Parameters: {"Rotation"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 909ms (ActiveRecord: 0.0ms | Allocations: 2936)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 21:41:00 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (0.6ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 25.2ms | Allocations: 2647)
+Completed 200 OK in 67ms (Views: 63.6ms | ActiveRecord: 0.6ms | Allocations: 7015)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 21:41:45 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.9ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (6.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (2.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 30.9ms | Allocations: 2207)
+Completed 200 OK in 70ms (Views: 52.9ms | ActiveRecord: 9.6ms | Allocations: 7107)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 21:41:47 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.6ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (7.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 30.8ms | Allocations: 1844)
+Completed 200 OK in 99ms (Views: 83.8ms | ActiveRecord: 8.8ms | Allocations: 6916)
+
+
+Started GET "/rotatephoto?Rotation=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 21:41:49 +0200
+Processing by PostPhotosController#rotate_photo as HTML
+  Parameters: {"Rotation"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 917ms (ActiveRecord: 0.0ms | Allocations: 2938)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 21:41:50 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (0.7ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 55.8ms | Allocations: 2646)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.7ms | Allocations: 7017)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 21:43:08 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.4ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (3.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (4.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 16.6ms | Allocations: 2244)
+Completed 200 OK in 30ms (Views: 18.5ms | ActiveRecord: 8.0ms | Allocations: 7144)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 21:43:09 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.5ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:77:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1844)
+Completed 200 OK in 23ms (Views: 18.2ms | ActiveRecord: 1.5ms | Allocations: 6917)
+
+
+Started GET "/rotatephoto?Rotation=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 21:43:11 +0200
+Processing by PostPhotosController#rotate_photo as HTML
+  Parameters: {"Rotation"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 946ms (ActiveRecord: 0.0ms | Allocations: 2932)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 21:43:12 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (0.7ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2645)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.7ms | Allocations: 7012)
+
+
+[5822] - Gracefully shutting down workers...
+[5822] === puma shutdown: 2019-09-10 21:43:50 +0200 ===
+[5822] - Goodbye!
+Exiting
+=== puma startup: 2019-09-10 22:01:42 +0200 ===
+[6723] * Starting control server on unix:///tmp/puma-status-1568145702568-6723
+[6723] - Worker 0 (pid: 6733) booted, phase: 0
+Started GET "/post_photos" for ::1 at 2019-09-10 22:01:45 +0200
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (1.0ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 73.6ms | Allocations: 6528)
+Completed 200 OK in 2983ms (Views: 2956.6ms | ActiveRecord: 11.0ms | Allocations: 1166078)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 22:02:34 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.8ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:111:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 322.6ms | Allocations: 100111)
+Completed 200 OK in 383ms (Views: 315.6ms | ActiveRecord: 19.1ms | Allocations: 109337)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--49b15ca1772e2db4d0580e9044620ecf1f57ad6f/download.png" for ::1 at 2019-09-10 22:02:35 +0200
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--49b15ca1772e2db4d0580e9044620ecf1f57ad6f", "filename"=>"download"}
+  [1m[36mActiveStorage::Blob Load (4.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[36m  S3 Storage (7.5ms) [0m[34mGenerated URL for file at key: qnhuvmtovtplvtnj7gb50uabwq0x (https://awsprojectbuckett.s3.us-west-2.amazonaws.com/qnhuvmtovtplvtnj7gb50uabwq0x?response-content-disposition=inline%3B%20filename%3D%22download.png%22%3B%20filename%2A%3DUTF-8%27%27download.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190910%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190910T200235Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ba3ab1bc52735f7294bcb20bb0f8b224dff04de4fe56aa59e3fe8c1f68ad0a54)[0m
+Redirected to https://awsprojectbuckett.s3.us-west-2.amazonaws.com/qnhuvmtovtplvtnj7gb50uabwq0x?response-content-disposition=inline%3B%20filename%3D%22download.png%22%3B%20filename%2A%3DUTF-8%27%27download.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190910%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190910T200235Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ba3ab1bc52735f7294bcb20bb0f8b224dff04de4fe56aa59e3fe8c1f68ad0a54
+Completed 302 Found in 19ms (ActiveRecord: 4.0ms | Allocations: 3656)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 22:02:37 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.7ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:111:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2060)
+Completed 200 OK in 39ms (Views: 31.7ms | ActiveRecord: 2.8ms | Allocations: 7273)
+
+
+Started GET "/red_photo?Red=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 22:02:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/red_photo"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/red_photo?Red=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 22:03:32 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/red_photo"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/blue_photo?Blue=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 22:03:38 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/blue_photo"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[6723] - Gracefully shutting down workers...
+[6723] === puma shutdown: 2019-09-10 22:03:45 +0200 ===
+[6723] - Goodbye!
+Exiting
+=== puma startup: 2019-09-10 22:03:52 +0200 ===
+[6842] * Starting control server on unix:///tmp/puma-status-1568145832926-6842
+[6842] - Worker 0 (pid: 6851) booted, phase: 0
+Started GET "/post_photos" for ::1 at 2019-09-10 22:03:57 +0200
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (1.3ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 87.0ms | Allocations: 6531)
+Completed 200 OK in 3042ms (Views: 3007.7ms | ActiveRecord: 17.9ms | Allocations: 1166081)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 22:04:03 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.5ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:111:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 288.7ms | Allocations: 98860)
+Completed 200 OK in 371ms (Views: 345.0ms | ActiveRecord: 19.7ms | Allocations: 104369)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 22:04:06 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.5ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:111:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2080)
+Completed 200 OK in 41ms (Views: 34.5ms | ActiveRecord: 2.5ms | Allocations: 7282)
+
+
+Started GET "/redphoto?Red=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 22:04:07 +0200
+Processing by PostPhotosController#red_photo as HTML
+  Parameters: {"Red"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 1080ms (ActiveRecord: 0.0ms | Allocations: 11080)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 22:04:08 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (2.3ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2644)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 2.3ms | Allocations: 7012)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 22:06:00 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.7ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:111:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2211)
+Completed 200 OK in 25ms (Views: 19.8ms | ActiveRecord: 1.7ms | Allocations: 7111)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 22:06:02 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.4ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:111:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (3.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1858)
+Completed 200 OK in 27ms (Views: 19.6ms | ActiveRecord: 4.0ms | Allocations: 6913)
+
+
+Started GET "/rotatephoto?Rotation=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 22:06:04 +0200
+Processing by PostPhotosController#rotate_photo as HTML
+  Parameters: {"Rotation"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 886ms (ActiveRecord: 0.0ms | Allocations: 2931)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-10 22:06:05 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (0.6ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2651)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.6ms | Allocations: 7018)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 22:06:32 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (11.1ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:111:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 21.3ms | Allocations: 2207)
+Completed 200 OK in 81ms (Views: 65.3ms | ActiveRecord: 12.5ms | Allocations: 7125)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 22:06:34 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.6ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:111:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1862)
+Completed 200 OK in 24ms (Views: 18.5ms | ActiveRecord: 2.1ms | Allocations: 6935)
+
+
+Started GET "/deletephoto?Delete=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 22:06:35 +0200
+Processing by PostPhotosController#delete_photo as HTML
+  Parameters: {"Delete"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Completed 500 Internal Server Error in 3015ms (ActiveRecord: 0.0ms | Allocations: 3709)
+
+
+  
+Aws::Sigv4::Errors::MissingCredentialsError (missing credentials, provide credentials with one of the following options:
+  - :access_key_id and :secret_access_key
+  - :credentials
+  - :credentials_provider):
+  
+app/controllers/post_photos_controller.rb:45:in `delete_photo'
+[6842] - Gracefully shutting down workers...
+[6842] === puma shutdown: 2019-09-10 22:07:07 +0200 ===
+[6842] - Goodbye!
+Exiting
+=== puma startup: 2019-09-10 22:07:14 +0200 ===
+[6996] * Starting control server on unix:///tmp/puma-status-1568146034384-6996
+[6996] - Worker 0 (pid: 7011) booted, phase: 0
+Started GET "/post_photos" for ::1 at 2019-09-10 22:07:24 +0200
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (1.2ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 84.7ms | Allocations: 6533)
+Completed 200 OK in 2963ms (Views: 2936.3ms | ActiveRecord: 11.2ms | Allocations: 1166083)
+
+
+Started GET "/post_photos/31" for ::1 at 2019-09-10 22:07:29 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.5ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:114:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 377.9ms | Allocations: 98885)
+Completed 200 OK in 400ms (Views: 364.5ms | ActiveRecord: 28.4ms | Allocations: 104392)
+
+
+Started GET "/post_photos/31/edit" for ::1 at 2019-09-10 22:07:30 +0200
+Processing by PostPhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPostPhoto Load (0.7ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:114:in `set_post_photo'
+  Rendering post_photos/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/post_photos/edit.html.erb:4
+  Rendered post_photos/edit.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2057)
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 1.9ms | Allocations: 7255)
+
+
+Started GET "/deletephoto?Delete=qnhuvmtovtplvtnj7gb50uabwq0x" for ::1 at 2019-09-10 22:07:32 +0200
+Processing by PostPhotosController#delete_photo as HTML
+  Parameters: {"Delete"=>"qnhuvmtovtplvtnj7gb50uabwq0x"}
+Completed 406 Not Acceptable in 2119ms (ActiveRecord: 0.0ms | Allocations: 5611)
+
+
+  
+ActionController::MissingExactTemplate (PostPhotosController#delete_photo is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[6996] - Gracefully shutting down workers...
+[6996] === puma shutdown: 2019-09-10 22:08:01 +0200 ===
+[6996] - Goodbye!
+Exiting
