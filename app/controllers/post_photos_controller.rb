@@ -30,7 +30,7 @@ class PostPhotosController < ApplicationController
     redirect_to action: "index"
   end
 
-  def contrast_photo
+  def flip_photo
     sqs = Aws::SQS::Client.new(
         region: Rails.application.credentials.aws[:aws_region],
         access_key_id: Rails.application.credentials.aws[:access_key_id],
