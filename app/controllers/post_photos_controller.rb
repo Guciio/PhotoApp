@@ -30,13 +30,13 @@ class PostPhotosController < ApplicationController
     redirect_to action: "index"
   end
 
-  def red_photo
+  def contrast_photo
     sqs = Aws::SQS::Client.new(
         region: Rails.application.credentials.aws[:aws_region],
         access_key_id: Rails.application.credentials.aws[:access_key_id],
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
     sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
-                     message_body: "C:"+ params[:Red],
+                     message_body: "C:"+ params[:Contrast],
                      message_group_id: rand(1..100).to_s)
     redirect_to action: "index"
   end
