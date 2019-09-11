@@ -10524,3 +10524,130 @@ Processing by PostPhotosController#index as HTML
 Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.8ms | Allocations: 7260)
 
 
+[12042] - Gracefully shutting down workers...
+[12042] === puma shutdown: 2019-09-11 01:32:53 +0200 ===
+[12042] - Goodbye!
+Exiting
+=== puma startup: 2019-09-11 10:44:32 +0200 ===
+[3817] * Starting control server on unix:///tmp/puma-status-1568191472699-3817
+[3817] - Worker 0 (pid: 3826) booted, phase: 0
+Started GET "/post_photos" for ::1 at 2019-09-11 10:45:18 +0200
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  [1m[36mPostPhoto Load (4.6ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos"[0m
+  ↳ app/views/post_photos/index.html.erb:15
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 73.2ms | Allocations: 6579)
+Completed 200 OK in 3175ms (Views: 3143.4ms | ActiveRecord: 18.0ms | Allocations: 1166158)
+
+
+Started GET "/post_photos/33" for ::1 at 2019-09-11 10:45:24 +0200
+Processing by PostPhotosController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mPostPhoto Load (0.6ms)[0m  [1m[34mSELECT "post_photos".* FROM "post_photos" WHERE "post_photos"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/post_photos_controller.rb:127:in `set_post_photo'
+  Rendering post_photos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (4.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 33], ["record_type", "PostPhoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (2.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/post_photos/show.html.erb:21
+  Rendered post_photos/show.html.erb within layouts/application (Duration: 379.0ms | Allocations: 98971)
+Completed 200 OK in 398ms (Views: 360.8ms | ActiveRecord: 29.5ms | Allocations: 104478)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a90829dc2694be9f395f83ba319c1382e722cbe0/test.png" for ::1 at 2019-09-11 10:45:24 +0200
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a90829dc2694be9f395f83ba319c1382e722cbe0", "filename"=>"test"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[36m  S3 Storage (12.0ms) [0m[34mGenerated URL for file at key: mzw5da79ybxbfic5wxlfcavhwlkk (https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?response-content-disposition=inline%3B%20filename%3D%22test.png%22%3B%20filename%2A%3DUTF-8%27%27test.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T084524Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2ab87cc9574212452865f60b45297678cd78b0cb8ff4c84fe90f267321880253)[0m
+Redirected to https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?response-content-disposition=inline%3B%20filename%3D%22test.png%22%3B%20filename%2A%3DUTF-8%27%27test.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T084524Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2ab87cc9574212452865f60b45297678cd78b0cb8ff4c84fe90f267321880253
+Completed 302 Found in 21ms (ActiveRecord: 0.6ms | Allocations: 3657)
+
+
+Started GET "/download" for ::1 at 2019-09-11 10:45:27 +0200
+Processing by PostPhotosController#download_photo as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1967)
+
+
+  
+ArgumentError (missing required option :key):
+  
+app/controllers/post_photos_controller.rb:66:in `download_photo'
+Started GET "/downloadphoto?Download=mzw5da79ybxbfic5wxlfcavhwlkk" for ::1 at 2019-09-11 10:47:53 +0200
+Processing by PostPhotosController#download_photo as HTML
+  Parameters: {"Download"=>"mzw5da79ybxbfic5wxlfcavhwlkk"}
+Sent file https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T084755Z&X-Amz-Expires=360&X-Amz-SignedHeaders=host&X-Amz-Signature=ecc3cf21c3db74dfc72d67ff2ec383369fd07b619c7aa1047fafc1cb06f2d67c (0.6ms)
+Completed 500 Internal Server Error in 1786ms (ActiveRecord: 0.0ms | Allocations: 4628)
+
+
+  
+ActionController::MissingFile (Cannot read file https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T084755Z&X-Amz-Expires=360&X-Amz-SignedHeaders=host&X-Amz-Signature=ecc3cf21c3db74dfc72d67ff2ec383369fd07b619c7aa1047fafc1cb06f2d67c):
+  
+app/controllers/post_photos_controller.rb:69:in `download_photo'
+Started GET "/downloadphoto?Download=mzw5da79ybxbfic5wxlfcavhwlkk" for ::1 at 2019-09-11 10:51:25 +0200
+Processing by PostPhotosController#download_photo as HTML
+  Parameters: {"Download"=>"mzw5da79ybxbfic5wxlfcavhwlkk"}
+Sent file https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T085125Z&X-Amz-Expires=360&X-Amz-SignedHeaders=host&X-Amz-Signature=fcb1b9bc389a1fb99e2a377b0b8829bc102d028784e18c2ea35edc52cd34076a/image.png (0.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2862)
+
+
+  
+ActionController::MissingFile (Cannot read file https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T085125Z&X-Amz-Expires=360&X-Amz-SignedHeaders=host&X-Amz-Signature=fcb1b9bc389a1fb99e2a377b0b8829bc102d028784e18c2ea35edc52cd34076a/image.png):
+  
+app/controllers/post_photos_controller.rb:69:in `download_photo'
+Started GET "/downloadphoto?Download=mzw5da79ybxbfic5wxlfcavhwlkk" for ::1 at 2019-09-11 10:52:33 +0200
+Processing by PostPhotosController#download_photo as HTML
+  Parameters: {"Download"=>"mzw5da79ybxbfic5wxlfcavhwlkk"}
+Sent file https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T085234Z&X-Amz-Expires=360&X-Amz-SignedHeaders=host&X-Amz-Signature=1596ce4deab25015beb250a62df6402dacbe61d123e25c02099cbfdda0c5949c (0.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2857)
+
+
+  
+ActionController::MissingFile (Cannot read file https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T085234Z&X-Amz-Expires=360&X-Amz-SignedHeaders=host&X-Amz-Signature=1596ce4deab25015beb250a62df6402dacbe61d123e25c02099cbfdda0c5949c):
+  
+app/controllers/post_photos_controller.rb:69:in `download_photo'
+Started GET "/downloadphoto?Download=mzw5da79ybxbfic5wxlfcavhwlkk" for ::1 at 2019-09-11 10:54:25 +0200
+Processing by PostPhotosController#download_photo as HTML
+  Parameters: {"Download"=>"mzw5da79ybxbfic5wxlfcavhwlkk"}
+Sent file https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T085425Z&X-Amz-Expires=360&X-Amz-SignedHeaders=host&X-Amz-Signature=b99831d6294f611d90db826e1969fede836ae911fcb0f4d728c9cdbce16bf226 (0.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2851)
+
+
+  
+ActionController::MissingFile (Cannot read file https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T085425Z&X-Amz-Expires=360&X-Amz-SignedHeaders=host&X-Amz-Signature=b99831d6294f611d90db826e1969fede836ae911fcb0f4d728c9cdbce16bf226):
+  
+app/controllers/post_photos_controller.rb:69:in `download_photo'
+Started GET "/downloadphoto?Download=mzw5da79ybxbfic5wxlfcavhwlkk" for ::1 at 2019-09-11 10:54:28 +0200
+Processing by PostPhotosController#download_photo as HTML
+  Parameters: {"Download"=>"mzw5da79ybxbfic5wxlfcavhwlkk"}
+Sent file https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T085428Z&X-Amz-Expires=360&X-Amz-SignedHeaders=host&X-Amz-Signature=99c4b854ba948ace3f3bb9efaf402392c1f91beb70961b6dba51f4533f137ad8 (0.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2860)
+
+
+  
+ActionController::MissingFile (Cannot read file https://awsprojectbuckett.s3.us-west-2.amazonaws.com/mzw5da79ybxbfic5wxlfcavhwlkk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3VGXPGMJ7BPIKLVT%2F20190911%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190911T085428Z&X-Amz-Expires=360&X-Amz-SignedHeaders=host&X-Amz-Signature=99c4b854ba948ace3f3bb9efaf402392c1f91beb70961b6dba51f4533f137ad8):
+  
+app/controllers/post_photos_controller.rb:69:in `download_photo'
+Started GET "/downloadphoto?Download=mzw5da79ybxbfic5wxlfcavhwlkk" for ::1 at 2019-09-11 11:05:21 +0200
+Processing by PostPhotosController#download_photo as HTML
+  Parameters: {"Download"=>"mzw5da79ybxbfic5wxlfcavhwlkk"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Sent data download (3.1ms)
+Redirected to 
+Completed 500 Internal Server Error in 975ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 4175)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/post_photos_controller.rb:74:in `download_photo'
+Started GET "/downloadphoto?Download=mzw5da79ybxbfic5wxlfcavhwlkk" for ::1 at 2019-09-11 11:05:41 +0200
+Processing by PostPhotosController#download_photo as HTML
+  Parameters: {"Download"=>"mzw5da79ybxbfic5wxlfcavhwlkk"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 1)
+Sent data download (5.6ms)
+Completed 200 OK in 917ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 3675)
+
+

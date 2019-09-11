@@ -65,9 +65,9 @@ class PostPhotosController < ApplicationController
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
     obj = s3.bucket('awsprojectbuckett').object(params[:Download])
 
-    IO.copy_stream(open(obj.presigned_url(:get, expires_in: 360)), params[:Download]+'.png')
+    data = open(obj.presigned_url(:get, expires_in: 360))
+    send_data data.read, filename: "download", type: "image/png", disposition: 'inline', stream: 'true', buffer_size: '4096'
 
-    redirect_to action: "index"
   end
   # GET /post_photos/1
   # GET /post_photos/1.json
