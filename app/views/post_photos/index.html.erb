@@ -3,26 +3,35 @@
 <h1>S3 Photos</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
-    <% @post_photos.each do |post_photo| %>
-      <tr>
-        <td><%= post_photo.title %></td>
-        <td><%= post_photo.content %></td>
-        <td><%= link_to 'Show', post_photo %></td>
-        <td><%= link_to 'Edit', edit_post_photo_path(post_photo) %></td>
-      </tr>
+
+  <%= link_to 'New Photo', new_post_photo_path %>
+  <p>
+  <form action="/rotatephoto">
+    <select id="imageSelect" multiple="multiple" class="image-picker show-html" name="keys[]" >
+      <% @objects.each do |object| %>
+        <option value="<%= object.key %>"><%= object.key %></option>
+      <% end %>
+    </select>
+    <p>
+      <button type="submit" name="Rotation" >Rotate</button>
+      <button type="submit" formaction="/deletephoto" name="Delete" >Delete</button>
+      <button type="submit" formaction="/bluephoto" name="Blue" >Blue</button>
+      <button type="submit" formaction="/flipphoto" name="Flip">Flip</button>
+      <form action="/download">
+        <button type="submit" name="Download" >Download</button>
+      </form>
+    </p>
+  </form>
+  -------------------------------------------------------------------------------------------------------
+  </p>
+    <% @objects.each do |object| %>
+      <p>
+        <p><%= object.key %></p>
+        <img src='<%= @presigned_url.url + "/" + object.key %>' >
+      </p>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Photo', new_post_photo_path %>

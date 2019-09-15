@@ -1,10 +1,16 @@
 class PostPhotosController < ApplicationController
-  before_action :set_post_photo, only: [:show, :edit, :update, :destroy]
-  skip_before_action :verify_authenticity_token
+  before_action :request_for_presigned_url, :set_post_photo, only: [:show, :edit, :update, :destroy]
+
   require 'open-uri'
   # GET /post_photos
   # GET /post_photos.json
   def index
+    request_for_presigned_url
+    client = Aws::S3::Client.new(
+        region: Rails.application.credentials.aws[:aws_region],
+        access_key_id: Rails.application.credentials.aws[:access_key_id],
+        secret_access_key: Rails.application.credentials.aws[:secret_access_key])
+    @objects = client.list_objects({bucket:'awsprojectbuckett'}).contents
     @post_photos = PostPhoto.all
   end
 
@@ -13,9 +19,22 @@ class PostPhotosController < ApplicationController
         region: Rails.application.credentials.aws[:aws_region],
         access_key_id: Rails.application.credentials.aws[:access_key_id],
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
-    sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
-                     message_body: rand(10..99).to_s + "R:"+ params[:Rotation],
-                     message_group_id: rand(1..100).to_s)
+
+    entries = Array.new(params[:keys].size)
+    i=0
+    params[:keys].each do |key|
+      obj = {
+          id: 'msg' + i.to_s,
+          message_body: rand(10..99).to_s + "R:"+ key,
+          message_group_id: rand(1..100).to_s,
+      }
+      entries[i] = obj
+      i += 1
+    end
+    sqs.send_message_batch({
+                               queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
+                               entries: entries
+                           })
     redirect_to action: "index"
   end
 
@@ -24,9 +43,23 @@ class PostPhotosController < ApplicationController
         region: Rails.application.credentials.aws[:aws_region],
         access_key_id: Rails.application.credentials.aws[:access_key_id],
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
-    sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
-                     message_body: rand(10..99).to_s + "B:"+ params[:Blue],
-                     message_group_id: rand(1..100).to_s)
+
+    entries = Array.new(params[:keys].size)
+    i=0
+    params[:keys].each do |key|
+      obj = {
+          id: 'msg' + i.to_s,
+          message_body: rand(10..99).to_s + "B:"+ key,
+          message_group_id: rand(1..100).to_s,
+      }
+      entries[i] = obj
+      i += 1
+    end
+    sqs.send_message_batch({
+                               queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
+                               entries: entries
+                           })
+
     redirect_to action: "index"
   end
 
@@ -35,9 +68,21 @@ class PostPhotosController < ApplicationController
         region: Rails.application.credentials.aws[:aws_region],
         access_key_id: Rails.application.credentials.aws[:access_key_id],
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
-    sqs.send_message(queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
-                     message_body: rand(10..99).to_s + "F:"+ params[:Flip],
-                     message_group_id: rand(1..100).to_s)
+    entries = Array.new(params[:keys].size)
+    i=0
+    params[:keys].each do |key|
+      obj = {
+          id: 'msg' + i.to_s,
+          message_body: rand(10..99).to_s + "F:"+ key,
+          message_group_id: rand(1..100).to_s,
+      }
+      entries[i] = obj
+      i += 1
+    end
+    sqs.send_message_batch({
+                               queue_url: 'https://sqs.us-west-2.amazonaws.com/801463284499/awsprojectqueue.fifo',
+                               entries: entries
+                           })
     redirect_to action: "index"
   end
 
@@ -46,16 +91,20 @@ class PostPhotosController < ApplicationController
         region: Rails.application.credentials.aws[:aws_region],
         access_key_id: Rails.application.credentials.aws[:access_key_id],
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
-    s3.delete_objects(
-        bucket: 'awsprojectbuckett',
-        delete: {
-            objects: [
-                {
-                    key: params[:Delete]
-                }
-            ]
-        })
+
+    params[:keys].each do |key|
+      s3.delete_objects(
+          bucket: 'awsprojectbuckett',
+          delete: {
+              objects: [
+                  key: key
+              ]
+          })
+    end
+
+
     redirect_to action: "index"
+
   end
 
   def download_photo
@@ -63,20 +112,28 @@ class PostPhotosController < ApplicationController
         region: Rails.application.credentials.aws[:aws_region],
         access_key_id: Rails.application.credentials.aws[:access_key_id],
         secret_access_key: Rails.application.credentials.aws[:secret_access_key])
-    obj = s3.bucket('awsprojectbuckett').object(params[:Download])
+    params[:keys].each do |key|
+      obj = s3.bucket('awsprojectbuckett').object(key)
 
-    data = open(obj.presigned_url(:get, expires_in: 360))
-    send_data data.read, filename: "download", type: "image/png", disposition: 'inline', stream: 'true', buffer_size: '4096'
-
+      data = open(obj.presigned_url(:get, expires_in: 360))
+      send_data data.read, filename: "download", type: "image/png", disposition: 'inline', stream: 'true', buffer_size: '4096'
+    end
   end
   # GET /post_photos/1
   # GET /post_photos/1.json
   def show
+    client = Aws::S3::Client.new(
+        region: Rails.application.credentials.aws[:aws_region],
+        access_key_id: Rails.application.credentials.aws[:access_key_id],
+        secret_access_key: Rails.application.credentials.aws[:secret_access_key])
+    @objects = client.list_objects({bucket:'awsprojectbuckett'}).contents
   end
 
   # GET /post_photos/new
   def new
-    @post_photo = PostPhoto.new
+
+    request_for_presigned_url
+    # @post_photo = PostPhoto.new
   end
 
   # GET /post_photos/1/edit
@@ -127,8 +184,28 @@ class PostPhotosController < ApplicationController
       @post_photo = PostPhoto.find(params[:id])
     end
 
+  def request_for_presigned_url
+    aws_credentials = Aws::Credentials.new(
+        Rails.application.credentials.aws[:access_key_id],
+        Rails.application.credentials.aws[:secret_access_key]
+    )
+
+    s3_bucket = Aws::S3::Resource.new(
+        region: Rails.application.credentials.aws[:aws_region],
+        credentials: aws_credentials
+    ).bucket('awsprojectbuckett')
+
+    @presigned_url = s3_bucket.presigned_post(
+        key: "#{Rails.env}/#{SecureRandom.uuid}/${filename}",
+        success_action_status: '201',
+        signature_expiration: (Time.now.utc + 15.minutes),
+        success_action_redirect: request.base_url + "/post_photos"
+    )
+
+  end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_photo_params
-      params.require(:post_photo).permit(:title, :content, :image)
+      params.require(:post_photo).permit(:title, :content)
     end
 end

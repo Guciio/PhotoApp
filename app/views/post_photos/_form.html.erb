@@ -1,32 +1,18 @@
-<%= form_with(model: post_photo, local: true) do |form| %>
-  <% if post_photo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post_photo.errors.count, "error") %> prohibited this post_photo from being saved:</h2>
-
-      <ul>
-        <% post_photo.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<form action="<%= @presigned_url.url %>" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <input type="hidden" name="key" value="<%= @presigned_url.fields['key'] %>" /><br />
+      <input type="hidden" name="X-Amz-Credential" value="<%= @presigned_url.fields['x-amz-credential'] %>" />
+      <input type="hidden" name="X-Amz-Algorithm" value="<%= @presigned_url.fields['x-amz-algorithm'] %>" />
+      <input type="hidden" name="X-Amz-Date" value="<%= @presigned_url.fields['x-amz-date'] %>" />
+      <input type="hidden" name="success_action_status" value="<%= @presigned_url.fields['success_action_status'] %>" />
+      <input type="hidden" name="Policy" value='<%= @presigned_url.fields['policy'] %>' />
+      <input type="hidden" name="X-Amz-Signature" value="<%= @presigned_url.fields['x-amz-signature'] %>" />
+      <input type="hidden" name="success_action_redirect"  value="<%= @presigned_url.fields['success_action_redirect'] %>" />
+      <div class="custom-file">
+        <img id="fileImage" src="#" alt=""/>
+        <label class="custom-file-label" for="file">File</label>
+        <input type="file" class="custom-file-input" name="file" id="file" />
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <input class="btn btn-primary"  type="submit" name="submit" value="Upload to Amazon S3" />
+</form>
