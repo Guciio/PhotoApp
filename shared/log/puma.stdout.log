@@ -12887,3 +12887,43 @@ Processing by PostPhotosController#index as HTML
 Completed 200 OK in 1004ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 14245)
 
 
+Started GET "/post_photos" for ::1 at 2019-09-15 23:59:52 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 515)
+Completed 200 OK in 1034ms (Views: 46.7ms | ActiveRecord: 0.0ms | Allocations: 13163)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-15 23:59:55 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 3.4ms | Allocations: 928)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1301)
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 0.0ms | Allocations: 9604)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-15 23:59:55 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 1.4ms | Allocations: 663)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 768)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 8926)
+
+
+Started GET "/post_photos?bucket=awsprojectbuckett&key=development%2F51e658e1-81e9-47e4-adb2-bc94c3b28960%2Ftest.png&etag=%221bc0af3649a971579d4e28e892960b41%22" for ::1 at 2019-09-16 00:00:00 +0200
+Processing by PostPhotosController#index as HTML
+  Parameters: {"bucket"=>"awsprojectbuckett", "key"=>"development/51e658e1-81e9-47e4-adb2-bc94c3b28960/test.png", "etag"=>"\"1bc0af3649a971579d4e28e892960b41\""}
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 217)
+Completed 200 OK in 1902ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 12109)
+
+
+Started GET "/download?keys%5B%5D=development%2F51e658e1-81e9-47e4-adb2-bc94c3b28960%2Ftest.png&Download=" for ::1 at 2019-09-16 00:00:05 +0200
+Processing by PostPhotosController#download_photo as HTML
+  Parameters: {"keys"=>["development/51e658e1-81e9-47e4-adb2-bc94c3b28960/test.png"], "Download"=>""}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Sent data download (49.9ms)
+Completed 200 OK in 1428ms (Views: 30.4ms | ActiveRecord: 0.0ms | Allocations: 8682)
+
+
