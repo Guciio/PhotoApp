@@ -12927,3 +12927,11 @@ Sent data download (49.9ms)
 Completed 200 OK in 1428ms (Views: 30.4ms | ActiveRecord: 0.0ms | Allocations: 8682)
 
 
+Started GET "/post_photos?bucket=awsprojectbuckett&key=development%2F51e658e1-81e9-47e4-adb2-bc94c3b28960%2Ftest.png&etag=%221bc0af3649a971579d4e28e892960b41%22" for ::1 at 2019-09-16 00:09:17 +0200
+Processing by PostPhotosController#index as HTML
+  Parameters: {"bucket"=>"awsprojectbuckett", "key"=>"development/51e658e1-81e9-47e4-adb2-bc94c3b28960/test.png", "etag"=>"\"1bc0af3649a971579d4e28e892960b41\""}
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 537)
+Completed 200 OK in 1020ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 13525)
+
+

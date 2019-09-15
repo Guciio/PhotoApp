@@ -10,7 +10,7 @@
   <form action="/rotatephoto">
     <select id="imageSelect" multiple="multiple" class="image-picker show-html" name="keys[]" >
       <% @objects.each do |object| %>
-        <option value="<%= object.key %>"><%= object.key %></option>
+        <option value="<%= object.key %>"><%= File.basename(object.key) %></option>
       <% end %>
     </select>
     <p>
@@ -25,7 +25,7 @@
   </p>
     <% @objects.each do |object| %>
       <p>
-        <p><%= object.key %></p>
+        <p><%= File.basename(object.key) %></p>
         <img src='<%= @presigned_url.url + "/" + object.key %>' >
       </p>
     <% end %>
