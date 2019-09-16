@@ -12935,3 +12935,236 @@ Processing by PostPhotosController#index as HTML
 Completed 200 OK in 1020ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 13525)
 
 
+[21758] - Gracefully shutting down workers...
+[21758] === puma shutdown: 2019-09-16 00:09:53 +0200 ===
+[21758] - Goodbye!
+Exiting
+=== puma startup: 2019-09-16 00:10:46 +0200 ===
+[23718] * Starting control server on unix:///tmp/puma-status-1568585446159-23718
+[23718] - Worker 0 (pid: 23727) booted, phase: 0
+Started GET "/post_photos?bucket=awsprojectbuckett&key=development%2F51e658e1-81e9-47e4-adb2-bc94c3b28960%2Ftest.png&etag=%221bc0af3649a971579d4e28e892960b41%22" for ::1 at 2019-09-16 00:11:33 +0200
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostPhotosController#index as HTML
+  Parameters: {"bucket"=>"awsprojectbuckett", "key"=>"development/51e658e1-81e9-47e4-adb2-bc94c3b28960/test.png", "etag"=>"\"1bc0af3649a971579d4e28e892960b41\""}
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 722)
+Completed 200 OK in 5190ms (Views: 3596.5ms | ActiveRecord: 0.0ms | Allocations: 1245334)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-16 00:11:41 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 3.0ms | Allocations: 929)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1313)
+Completed 200 OK in 27ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 9613)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-16 00:11:41 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 1.6ms | Allocations: 663)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 768)
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 8923)
+
+
+[23727] ! Detected parent died, dying
+=== puma startup: 2019-09-16 00:15:55 +0200 ===
+[24029] * Starting control server on unix:///tmp/puma-status-1568585755432-24029
+[24029] - Worker 0 (pid: 24039) booted, phase: 0
+Started GET "/post_photos" for ::1 at 2019-09-16 00:15:58 +0200
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostPhotosController#index as HTML
+Started GET "/post_photos" for ::1 at 2019-09-16 00:16:00 +0200
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 28.8ms | Allocations: 719)
+Completed 200 OK in 5408ms (Views: 2912.3ms | ActiveRecord: 0.0ms | Allocations: 1246308)
+
+
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 236)
+Completed 200 OK in 1014ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 13481)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-16 00:16:08 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 4.2ms | Allocations: 952)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1336)
+Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 9638)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-16 00:16:08 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 1.6ms | Allocations: 687)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 792)
+Completed 200 OK in 26ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 8953)
+
+
+[24029] - Gracefully shutting down workers...
+[24029] === puma shutdown: 2019-09-16 00:18:12 +0200 ===
+[24029] - Goodbye!
+Exiting
+=== puma startup: 2019-09-16 00:18:20 +0200 ===
+[24234] * Starting control server on unix:///tmp/puma-status-1568585900995-24234
+[24234] - Worker 0 (pid: 24243) booted, phase: 0
+Started GET "/post_photos" for ::1 at 2019-09-16 00:18:26 +0200
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 721)
+Completed 200 OK in 4240ms (Views: 2839.5ms | ActiveRecord: 0.0ms | Allocations: 1245328)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-16 00:18:33 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 2.8ms | Allocations: 929)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1314)
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 9616)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-16 00:18:33 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 1.5ms | Allocations: 663)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 768)
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 8923)
+
+
+=== puma startup: 2019-09-16 00:19:58 +0200 ===
+=== puma startup: 2019-09-16 00:19:58 +0200 ===
+=== puma startup: 2019-09-16 00:19:58 +0200 ===
+[24234] - Gracefully shutting down workers...
+=== puma startup: 2019-09-16 00:20:11 +0200 ===
+=== puma startup: 2019-09-16 00:20:11 +0200 ===
+Exiting
+=== puma startup: 2019-09-16 12:25:01 +0200 ===
+[4318] * Starting control server on unix:///tmp/puma-status-1568629501864-4318
+[4318] - Worker 0 (pid: 4330) booted, phase: 0
+Started GET "/post_photos" for ::1 at 2019-09-16 12:25:11 +0200
+  [1m[35m (18.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 625)
+Completed 200 OK in 4574ms (Views: 3022.7ms | ActiveRecord: 0.0ms | Allocations: 1245252)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-16 12:25:21 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 2.9ms | Allocations: 953)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1338)
+Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 9645)
+
+
+Started GET "/post_photos/new" for ::1 at 2019-09-16 12:25:21 +0200
+Processing by PostPhotosController#new as HTML
+  Rendering post_photos/new.html.erb within layouts/application
+  Rendered post_photos/_form.html.erb (Duration: 1.7ms | Allocations: 687)
+  Rendered post_photos/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 792)
+Completed 200 OK in 23ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 8952)
+
+
+Started GET "/post_photos?bucket=awsprojectbuckett&key=development%2F3023847b-b5aa-48ce-bb98-1d7b8c865495%2Ftest.png&etag=%221bc0af3649a971579d4e28e892960b41%22" for ::1 at 2019-09-16 12:25:27 +0200
+Processing by PostPhotosController#index as HTML
+  Parameters: {"bucket"=>"awsprojectbuckett", "key"=>"development/3023847b-b5aa-48ce-bb98-1d7b8c865495/test.png", "etag"=>"\"1bc0af3649a971579d4e28e892960b41\""}
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 245)
+Completed 200 OK in 1040ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 12490)
+
+
+Started GET "/rotatephoto?keys%5B%5D=development%2F3023847b-b5aa-48ce-bb98-1d7b8c865495%2Ftest.png&keys%5B%5D=development%2F51e658e1-81e9-47e4-adb2-bc94c3b28960%2Ftest.png&Rotation=" for ::1 at 2019-09-16 12:25:35 +0200
+Processing by PostPhotosController#rotate_photo as HTML
+  Parameters: {"keys"=>["development/3023847b-b5aa-48ce-bb98-1d7b8c865495/test.png", "development/51e658e1-81e9-47e4-adb2-bc94c3b28960/test.png"], "Rotation"=>""}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 1985ms (ActiveRecord: 0.0ms | Allocations: 15103)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-16 12:25:37 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 243)
+Completed 200 OK in 1066ms (Views: 26.9ms | ActiveRecord: 0.0ms | Allocations: 12484)
+
+
+Started GET "/flipphoto?keys%5B%5D=development%2F3023847b-b5aa-48ce-bb98-1d7b8c865495%2Ftest.png&keys%5B%5D=development%2F51e658e1-81e9-47e4-adb2-bc94c3b28960%2Ftest.png&Flip=" for ::1 at 2019-09-16 12:25:49 +0200
+Processing by PostPhotosController#flip_photo as HTML
+  Parameters: {"keys"=>["development/3023847b-b5aa-48ce-bb98-1d7b8c865495/test.png", "development/51e658e1-81e9-47e4-adb2-bc94c3b28960/test.png"], "Flip"=>""}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 955ms (ActiveRecord: 0.0ms | Allocations: 3258)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-16 12:25:50 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 242)
+Completed 200 OK in 1035ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 12493)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-16 12:26:53 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 242)
+Completed 200 OK in 1003ms (Views: 33.5ms | ActiveRecord: 0.0ms | Allocations: 12502)
+
+
+Started GET "/bluephoto?keys%5B%5D=development%2F3023847b-b5aa-48ce-bb98-1d7b8c865495%2Ftest.png&keys%5B%5D=development%2F51e658e1-81e9-47e4-adb2-bc94c3b28960%2Ftest.png&Blue=" for ::1 at 2019-09-16 12:27:00 +0200
+Processing by PostPhotosController#blue_photo as HTML
+  Parameters: {"keys"=>["development/3023847b-b5aa-48ce-bb98-1d7b8c865495/test.png", "development/51e658e1-81e9-47e4-adb2-bc94c3b28960/test.png"], "Blue"=>""}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 962ms (ActiveRecord: 0.0ms | Allocations: 3229)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-16 12:27:01 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 240)
+Completed 200 OK in 1024ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 12485)
+
+
+Started GET "/rotatephoto?keys%5B%5D=development%2F3023847b-b5aa-48ce-bb98-1d7b8c865495%2Ftest.png&keys%5B%5D=development%2F51e658e1-81e9-47e4-adb2-bc94c3b28960%2Ftest.png&Rotation=" for ::1 at 2019-09-16 12:27:05 +0200
+Processing by PostPhotosController#rotate_photo as HTML
+  Parameters: {"keys"=>["development/3023847b-b5aa-48ce-bb98-1d7b8c865495/test.png", "development/51e658e1-81e9-47e4-adb2-bc94c3b28960/test.png"], "Rotation"=>""}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 925ms (ActiveRecord: 0.0ms | Allocations: 3193)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-16 12:27:06 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 238)
+Completed 200 OK in 1025ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 12453)
+
+
+Started GET "/flipphoto?keys%5B%5D=development%2F3023847b-b5aa-48ce-bb98-1d7b8c865495%2Ftest.png&Flip=" for ::1 at 2019-09-16 12:27:14 +0200
+Processing by PostPhotosController#flip_photo as HTML
+  Parameters: {"keys"=>["development/3023847b-b5aa-48ce-bb98-1d7b8c865495/test.png"], "Flip"=>""}
+Redirected to http://localhost:3000/post_photos
+Completed 302 Found in 898ms (ActiveRecord: 0.0ms | Allocations: 3053)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-16 12:27:15 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 240)
+Completed 200 OK in 1102ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 12493)
+
+
+Started GET "/download?keys%5B%5D=development%2F3023847b-b5aa-48ce-bb98-1d7b8c865495%2Ftest.png&Download=" for ::1 at 2019-09-16 12:27:23 +0200
+Processing by PostPhotosController#download_photo as HTML
+  Parameters: {"keys"=>["development/3023847b-b5aa-48ce-bb98-1d7b8c865495/test.png"], "Download"=>""}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Sent data download (40.4ms)
+Completed 200 OK in 987ms (Views: 33.6ms | ActiveRecord: 0.0ms | Allocations: 8713)
+
+
+Started GET "/post_photos" for ::1 at 2019-09-16 12:27:29 +0200
+Processing by PostPhotosController#index as HTML
+  Rendering post_photos/index.html.erb within layouts/application
+  Rendered post_photos/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 238)
+Completed 200 OK in 993ms (Views: 35.8ms | ActiveRecord: 0.0ms | Allocations: 12481)
+
+

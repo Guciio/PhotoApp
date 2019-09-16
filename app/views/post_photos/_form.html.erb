@@ -8,6 +8,7 @@
       <input type="hidden" name="Policy" value='<%= @presigned_url.fields['policy'] %>' />
       <input type="hidden" name="X-Amz-Signature" value="<%= @presigned_url.fields['x-amz-signature'] %>" />
       <input type="hidden" name="success_action_redirect"  value="<%= @presigned_url.fields['success_action_redirect'] %>" />
+      <input type="hidden" name="acl"  value="public-read" />
       <div class="custom-file">
         <img id="fileImage" src="#" alt=""/>
         <label class="custom-file-label" for="file">File</label>

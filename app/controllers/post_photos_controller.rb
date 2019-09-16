@@ -199,7 +199,8 @@ class PostPhotosController < ApplicationController
         key: "#{Rails.env}/#{SecureRandom.uuid}/${filename}",
         success_action_status: '201',
         signature_expiration: (Time.now.utc + 15.minutes),
-        success_action_redirect: request.base_url + "/post_photos"
+        success_action_redirect: request.base_url + "/post_photos",
+        acl: "public-read"
     )
 
   end
